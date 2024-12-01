@@ -33,3 +33,10 @@ After checking for nans in all the columns, these are the columns which turned u
 In the next 11 chapters, we will be tackling each column. 1 column per chapter, esketit.
 
 ## Version 3:
+For age, the data has a pretty even distribution (see Fig 1 below), so it wont really matter whether we use mean or median for fillna, both values are rather close anyway. I'll just fillna with mean because thats more familiar to most people compared to median.
+
+Fig 1:
+
+![image](https://github.com/user-attachments/assets/19feaa09-d838-4f44-8372-7c38a9f88971)
+
+## Version 4:
