@@ -18,8 +18,8 @@ Brand new Kaggle notebook, haven't edited anything yet, this is just a standard 
 I start with removing the id column (which is unique and doesnt provide insightful patterns or learning points) as well as the target column 'Premium Amount', which i put to one side as the y-value for later when training the model. I also added a checknan function, which prints the rows where a certain column has a nan value, as well as a fillnan function which fills nan values with a method of your choice: mean, median, or with the values of another column.
 
 After checking for nans in all the columns, these are the columns which turned up:
-- Age
-- Annual Income
+- Age 
+- Annual Income 
 - Marital Status
 - Number of Dependents
 - Occupation
@@ -32,21 +32,37 @@ After checking for nans in all the columns, these are the columns which turned u
 
 In the next 11 chapters, we will be tackling each column. 1 column per chapter, esketit.
 
-## Version 3:
+## Version 3: Age
 For age, the data has a pretty even distribution (see Fig 1 below), so it wont really matter whether we use mean or median for fillna, both values are rather close anyway. I'll just fillna with mean because thats more familiar to most people compared to median.
 
 Fig 1:
 
 ![image](https://github.com/user-attachments/assets/19feaa09-d838-4f44-8372-7c38a9f88971)
 
-## Version 4:
+## Version 4: Annual Income
 Most income distributions are skewed right with a few high income individuals and many low income individuals, and the income data we are working with is no different (see Fig 2 below):
 
 Fig 2:
 
 ![image](https://github.com/user-attachments/assets/81ca8f5b-2d8d-4feb-b989-9564460f9abe)
 
-For this ill be using the median to fillna. The mean in income distributions tend to be much higher than the median due to the right skewing, hence i feel median is a better representation of the "average person's" income.
+For this ill be using the median to fillna. The mean in income distributions tend to be much higher than the median due to the right skewing (32745.2 and 23911.0 respectively, hence i feel median is a better representation of the "average person's" income.
 
-## Version 5:
+## Version 5: Marital Status
+In the 'Marital Status' column, there are 18529 NaN values, which sounds like alot but only makes up 0.015 (1.5%) of the total training dataset. To fix this, i will just replace all with 'unknown' to play it safe as im not confident the nan values follow the mode. I might change this to mode later on for experimenting and see if it increases the accuracy score of the model. Sticking with the safe option for now.
 
+## Version 6: Number of Dependents
+
+## Version 7: Occupation
+
+## Version 8: Health Score
+
+## Version 9: Previous Claims
+
+## Version 10: Vehicle Age
+
+## Version 11: Credit Score
+
+## Version 12: Insurance Duration
+
+## Version 13: Customer Feedback
