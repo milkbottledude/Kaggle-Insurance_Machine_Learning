@@ -40,3 +40,13 @@ Fig 1:
 ![image](https://github.com/user-attachments/assets/19feaa09-d838-4f44-8372-7c38a9f88971)
 
 ## Version 4:
+Most income distributions are skewed right with a few high income individuals and many low income individuals, and the income data we are working with is no different (see Fig 2 below):
+
+Fig 2:
+
+![image](https://github.com/user-attachments/assets/81ca8f5b-2d8d-4feb-b989-9564460f9abe)
+
+For this ill be using the median to fillna. The mean in income distributions tend to be much higher than the median due to the right skewing, hence i feel median is a better representation of the "average person's" income.
+
+## Version 5:
+
