@@ -58,14 +58,34 @@ Gonna fillnan with the mean for this, it doesnt matter much anyway as both the m
 This column shows whether one is employed, unemployed, or self-employed. Employment is a big factor in the cost of insurance for many reasons. For example, your route to work may be a dangerous one so car and life insurance may be more expensive, or your insurance comes from your company meaning cheaper costs as you are buying as part of a bulk purchase of insurance with other employees. Overall, employment tends to result in cheaper insurance premiums, especially since its a sign of responsibility in risk assessment in the eyes of insurance companies. I will fillnan with the mode as of now, but i may completely remove this column in a future column as a large proportion of data is missing (30%), even though its an important factor.
 
 ## Version 8: Health Score
-With a reasonably normal distribution, this would do well with a mean fillnan. median works too, both values are very close to each other
+With a reasonably normal distribution, this would do well with a mean fillnan. median works too, both values are very close to each other.
 
 ## Version 9: Previous Claims
+Using mode for this as there arent a wide range of values, which is 0. My reasoning is that its quite rare for people to have filed an insurance claim before. Me personally, i dont know anyone who has used their insurance before, but that could be because i have little friends
 
 ## Version 10: Vehicle Age
+Distribution for this column is fairly even (see Fig 3 below), mean and median values dont defer by much, but ill just use median cuz i dont have to round off to a whole number
+
+Fig 3:
+
+![image](https://github.com/user-attachments/assets/e24d0623-3f61-466c-8c04-abd3d347b9b9)
+
 
 ## Version 11: Credit Score
+A distribution with no ridiculous outliers (see Fig 4 below), both mean and median values are extremely similar, will fillna with median.
+
+Fig 4:
+
+![image](https://github.com/user-attachments/assets/6f45d916-284e-47ad-b62f-2fd922b7e52d)
 
 ## Version 12: Insurance Duration
+Fig 5:
+
+![image](https://github.com/user-attachments/assets/d5436670-8d87-4299-9571-ef2f506b7c5f)
+
+Median. Nuff said.
 
 ## Version 13: Customer Feedback
+Not a wide range of values for this column (poor, average, good). Just gonna use mode for fillna, which is the value 'average'
+
+## Version 14: 
