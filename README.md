@@ -114,4 +114,10 @@ smokingmap = {'Yes': 1, 'No': 0}
 This way, unnecessary columns wont be created. Originally 2 separate columns for gender, 3 for feedback and 2 for smoking status, now just 1 for each variable. Doing that for 1.2m rows should do the trick. Also converting the feedback string values to numerical values shouldnt pose an issue for the model even though its 'though process' moulds to this thinking that good > average > poor (3 > 2 > 1).
 
 ## Version 16: Training RandomForestRegressor model
-Set up the RandomForestRegressor model as well as a simple function that returns the RMSLE when u pass the predicted and actual y values from the mocktest data. Got a RMSLE value of 1.16(2dp) from a stock rfr model with no custom hyperparams except random_state. The top score on the leaderboard is currently 1.03(2dp), so we have work to do.
+Set up the RandomForestRegressor model as well as a simple function that returns the RMSLE when u pass the predicted and actual y values from the mocktest data. Got a RMSLE value of 1.16(2dp) from a stock rfr model with no custom hyperparams except random_state. The top score on the leaderboard is currently 1.03(2dp), so we have work to do. For now ill submit it and see the public RMSLE score.
+
+# Version 17: Resorting to Linear Regression
+Submission couldnt go thru as the test data with 800k rows couldnt be predicted, my laptop sounds like a boeing rn. Prob cuz the model had to fit 720k training data from the train_test_split and predict 480k mock test data, before predicting 800k rows from the real test dataset. Nothing like the depression dataset which consisted of only 141k total training rows and 93.8k test rows. Switching to a more simpler LinearRegressor model, but will defo use a more in-depth machine learning model in the future, i have a few in mind. LinearRegressor is a simple model but did better than i thought, getting a RMSLE score of 1.17 (2dp). But when i try to predict with the test dataset, i keep running out of damn ram. I hope to find the problem soon, but rn im stumped.
+
+## Version 18: Switching to a Tensorflow Neural Network
+Switching to a Neural Network model, hopefully it works. This is my first time trying our a neural network model as well, so ive got some reading to do. 
