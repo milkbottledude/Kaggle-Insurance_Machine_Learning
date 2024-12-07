@@ -4,7 +4,7 @@ This machine learning project aims to predict insurance premiums based on variou
 Once again, feel free to skip to any chapters or versions that interest you, its a long report and its perfectly understandable if you want to just skim certain portions.
 
 ## Contents
-Chapter 1: Data Cleaning (Versions 1-
+Chapter 1: Data Cleaning (Versions 1-14)
 - Version 1: A new start
 - Version 2: Identifying NaN columns
 - Version 3: Tackling NaNs in the 'Age' column
@@ -88,4 +88,29 @@ Median. Nuff said.
 ## Version 13: Customer Feedback
 Not a wide range of values for this column (poor, average, good). Just gonna use mode for fillna, which is the value 'average'
 
-## Version 14: 
+## Version 14: Processing 'Policy Start Date' column
+As the first model i plan to use, randomforestregressor, cant handle datetime values, i have to process the data and change its format for something more 'digestible' for the model. My plan is to simply split the values into 2 separate columns, 'start year' and 'start month'. For the start year, i will leave it as it is as the randomforest models are good at managing such unscaled features without much trouble, and there is a general trend of insurance premiums increasing as the years pass (Fig 6 below shows gross insurance premiums against time). Contrary to this, there is no valid or apparent linear trend between month value and insurance price, so i will be converting the month values into qualitative values (1 to Jan, 2 to Feb, etc). For the rest of the elements in the datetime value (day and time), ill discard them as their small significance compared to year and month make them unlikely clues to find patterns and trends.
+
+Fig 6: (credits to statista: https://www.statista.com/outlook/fmo/insurances/worldwide)
+
+![image](https://github.com/user-attachments/assets/e15a2650-f449-41ea-82c3-b6f95622a60c)
+
+## Version 15: Making the Kaggle notebook run smoother 
+As expected of a training dataset with 1.2 million rows, it exceeded the ram limit of the kaggle notebook and crashed it (Fig 7). i want to train the model within the limits of the ram, but i also dont want to waste data by not using it. I also tidied up the fillnan code that was written in the earlier versions so that its slightly less of an eyesore.
+
+Fig 7:
+
+![image](https://github.com/user-attachments/assets/6ba7d107-588a-4348-9b54-f7b956d84942)
+
+
+To fix the ram problem, ill be changing up the values in the columns 'Gender', 'Customer Feedback', and 'Smoking Status' to reduce computational stress. ill just show the mapping dictionaries for the 3 columns below.
+
+gendermap = {'Male': 1, 'Female': 0}
+
+feedbackmap = {'Poor': 1, 'Average': 2, 'Good': 3}
+
+smokingmap = {'Yes': 1, 'No': 0}
+
+This way, unnecessary columns wont be created. Originally 2 separate columns for gender, 3 for feedback and 2 for smoking status, now just 1 for each variable. Doing that for 1.2m rows should do the trick. Also converting the feedback string values to numerical values shouldnt pose an issue for the model even though its 'though process' moulds to this thinking that good > average > poor (3 > 2 > 1).
+
+## Version 16: Training RandomForestRegressor model
