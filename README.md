@@ -119,5 +119,13 @@ Set up the RandomForestRegressor model as well as a simple function that returns
 # Version 17: Resorting to Linear Regression
 Submission couldnt go thru as the test data with 800k rows couldnt be predicted, my laptop sounds like a boeing rn. Prob cuz the model had to fit 720k training data from the train_test_split and predict 480k mock test data, before predicting 800k rows from the real test dataset. Nothing like the depression dataset which consisted of only 141k total training rows and 93.8k test rows. Switching to a more simpler LinearRegressor model, but will defo use a more in-depth machine learning model in the future, i have a few in mind. LinearRegressor is a simple model but did better than i thought, getting a RMSLE score of 1.17 (2dp). But when i try to predict with the test dataset, i keep running out of damn ram. I hope to find the problem soon, but rn im stumped.
 
-## Version 18: Switching to a Tensorflow Neural Network
-Switching to a Neural Network model, hopefully it works. This is my first time trying our a neural network model as well, so ive got some reading to do. 
+# Version 18: Finally found the problem
+I split up the 'Policy Start Date' into year and month columns for the train_data but did not for the test_data, resulting in the test_data getting dummies for 158776 unique datetime values, basically creating over 15k more columns and hence using up crazy ram. I found out when i printed out all unique values in each column for both datasets, and noticed the large number in a row where a large number should not be present (see Fig 8 below). A careless mistake on my part, i apologise. But that means we can now finally find out where we stand on the public leaderboard
+
+Fig 8:
+
+![image](https://github.com/user-attachments/assets/37f1e9de-57c2-4939-94e2-3ca91ccf2665)
+
+Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643 (ugh...)
+
+Version 19: Switching it up with TensorFlow Neural Network 
