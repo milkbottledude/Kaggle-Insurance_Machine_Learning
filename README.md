@@ -4,10 +4,28 @@ This machine learning project aims to predict insurance premiums based on variou
 Once again, feel free to skip to any chapters or versions that interest you, its a long report and its perfectly understandable if you want to just skim certain portions.
 
 ## Contents
-Chapter 1: Data Cleaning (Versions 1-14)
-- Version 1: A new start
-- Version 2: Identifying NaN columns
-- Version 3: Tackling NaNs in the 'Age' column
+Chapter 1: Data Cleaning (Versions 1-15)
+- V1: A new start
+- V2: Identifying NaN columns
+- V3: Tackling NaNs, starting with the 'Age' column
+- V4: Annual Income
+- V5: Marital Status
+- V6: Number of Dependents
+- V7: Occupation
+- V8: Health Score
+- V9: Previous Claims
+- V10: Vehicle Age
+- V11: Credit Score
+- V12: Insurance Duration
+- V13: Customer Feedback
+- V14: Processing 'Policy Start Date' column
+- V15: Making the Kaggle notebook run smoother
+
+Chapter 2:
+- V16: Training RandomForestRegressor model (a problem occured here)
+- V17: Resorting to Linear Regression
+- V18: Finally found the problem (and resolved it)
+- V19: Switching it up with TensorFlow Neural Network 
 
 # Chapter 1: Data Cleaning
 
