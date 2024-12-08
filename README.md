@@ -158,6 +158,8 @@ I'm feeling patient today so im trying this model again, but its going to take a
 
 Edit: Took a long time (Fig 9), but it was worth it. Got our best public RMSLE score so far, 1.1535. An improvement compared to previous best (1.16532) with the basic linear regression model.
 
+Fig 9:
+
 ![image](https://github.com/user-attachments/assets/29e21bd5-7d58-47bf-a9b8-dab2042d38a5)
 
 Current leaderboard position: 562/678
