@@ -156,8 +156,10 @@ Edit: public RMSLE score - 1.51244
 ## Version 20 & 20.1 & 20.1.1: RandomForestRegressor
 I'm feeling patient today so im trying this model again, but its going to take a very long time.
 
-Edit: Took a long time (Fig 9), but it was worth it. Best public RMSLE score so far, 1.1535 compared to previous best of 1.16532 with the basic linear regression model.
+Edit: Took a long time (Fig 9), but it was worth it. Got our best public RMSLE score so far, 1.1535. An improvement compared to previous best (1.16532) with the basic linear regression model.
 
 ![image](https://github.com/user-attachments/assets/29e21bd5-7d58-47bf-a9b8-dab2042d38a5)
+
+Current leaderboard position: 562/678
 
 ## Version 21: Switching it up with TensorFlow Neural Network 
