@@ -1,5 +1,5 @@
 # Kaggle-Insurance_Machine_Learning
-This machine learning project aims to predict insurance premiums based on various factors. I'll be documenting my machine learning process in this repository, similar to the Kaggle-Depressed_Machine_Learning repository. The latter competition took up a lot of time and i got rewarded with only dark eye bags, and im here to do it all over again. I need to get a life lol.
+This machine learning project aims to predict insurance premiums based on various factors. I'll be documenting my machine learning process in this repository, similar to the Kaggle-Depressed_Machine_Learning repository. The latter competition took up a lot of time and i got rewarded with only dark eye bags, and im here to do it all over again. Perhaps i should try other hobbies like fishing instead.
 
 Once again, feel free to skip to any chapters or versions that interest you, its a long report and its perfectly understandable if you want to just skim certain portions.
 
@@ -140,12 +140,17 @@ Set up the RandomForestRegressor model as well as a simple function that returns
 Submission couldnt go thru as the test data with 800k rows couldnt be predicted, my laptop sounds like a boeing rn. Prob cuz the model had to fit 720k training data from the train_test_split and predict 480k mock test data, before predicting 800k rows from the real test dataset. Nothing like the depression dataset which consisted of only 141k total training rows and 93.8k test rows. Switching to a more simpler LinearRegressor model, but will defo use a more in-depth machine learning model in the future, i have a few in mind. LinearRegressor is a simple model but did better than i thought, getting a RMSLE score of 1.17 (2dp). But when i try to predict with the test dataset, i keep running out of damn ram. I hope to find the problem soon, but rn im stumped.
 
 # Version 18: Finally found the problem
-I split up the 'Policy Start Date' into year and month columns for the train_data but did not for the test_data, resulting in the test_data getting dummies for 158776 unique datetime values, basically creating over 15k more columns and hence using up crazy ram. I found out when i printed out all unique values in each column for both datasets, and noticed the large number in a row where a large number should not be present (see Fig 8 below). A careless mistake on my part, i apologise. But that means we can now finally find out where we stand on the public leaderboard
+I split up the 'Policy Start Date' into year and month columns for the train_data but did not for the test_data, resulting in the test_data getting dummies for 158776 unique datetime values, basically creating over 15k more columns and hence using up crazy ram. I found out when i printed out all unique values in each column for both datasets, and noticed the large number in a row where a large number should not be present (see Fig 8 below). A careless mistake on my part, i apologise. But that means we can now finally find out where we stand on the public leaderboard.
 
 Fig 8:
 
 ![image](https://github.com/user-attachments/assets/37f1e9de-57c2-4939-94e2-3ca91ccf2665)
 
-Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643 (ugh...)
+Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643
 
-Version 19: Switching it up with TensorFlow Neural Network 
+## Version 19 & 19.1:
+Trying out a DecisionTreeRegressor model. On the mock test data, it didnt do as well and got an RMSLE score of 1.52. But if theres one thing i learned from the previous competition (predicting depression), its that the mock test data score could sometimes be very different from the actual score, although granted this kind of occurence is rare. Only one way to find out.
+
+Edit: public RMSLE score - 1.51244 
+
+Version 20: Switching it up with TensorFlow Neural Network 
