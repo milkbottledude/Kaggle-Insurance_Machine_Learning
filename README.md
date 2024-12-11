@@ -168,3 +168,10 @@ Current leaderboard position: 562/678
 To start, i instantiated a Keras sequential model, fairly basic with just 3 layers including the input and output layer. Set the neurons in a decreasing manner starting from 128, but this is just the baseline and not the final neuron values. I may also change the layers depending on how the model is fitting. 
 
 ## Version 22: Configuring the model further
+Here are the hyperparameters ill be using for model.compile():
+
+optimizer: 'adam', im not super familiar with this optimizer if im being honest, but its the default optimizer and works for both classification and regression problems.
+
+loss: 'mean_squared_logarithmic_error'. The Kaggle competition evaluates submissions based on RMSLE, but the compile method does not accept RMSLE as a valid loss function. However, it does accept the next best thing, MSLE.
+
+metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to have multiple metrics, i chose mae as my primary metric as its a simple way to see the average difference between predicted and actual values. Supplementing the mae is the rmse as it informs us of the presence of large errors, which mae by itself doesnt tell us.
