@@ -165,3 +165,6 @@ Fig 9:
 Current leaderboard position: 562/678
 
 ## Version 21: Switching it up with TensorFlow Neural Network 
+To start, i instantiated a Keras sequential model, fairly basic with just 3 layers including the input and output layer. Set the neurons in a decreasing manner starting from 128, but this is just the baseline and not the final neuron values. I may also change the layers depending on how the model is fitting. 
+
+## Version 22: Configuring the model further
