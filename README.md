@@ -175,3 +175,8 @@ optimizer: 'adam', im not super familiar with this optimizer if im being honest,
 loss: 'mean_squared_logarithmic_error'. The Kaggle competition evaluates submissions based on RMSLE, but the compile method does not accept RMSLE as a valid loss function. However, it does accept the next best thing, MSLE.
 
 metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to have multiple metrics, i chose mae as my primary metric as its a simple way to see the average difference between predicted and actual values. Supplementing the mae is the rmse as it informs us of the presence of large errors, which mae by itself doesnt tell us.
+
+## Version 23: Feeding data into NN model
+Before passing the datasets, i gotta convert them from pandas dataframes to numpy arrays. After that, we can train the model using the fit method. For the hyperparameters, starting with 10 for number of epochs. For batch_size, i decided to go with 100. I feel its a value thats not too big that the model overfits, but also not too small that it takes forever all the rows to be trained on. These values are just starter values and ill be adjusting them in the future if needed, depending on whether overfitting or underfitting occurs or if the time taken for training is too long.
+
+## Version 24
