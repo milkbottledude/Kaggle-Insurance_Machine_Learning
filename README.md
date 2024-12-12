@@ -146,7 +146,7 @@ Fig 8:
 
 ![image](https://github.com/user-attachments/assets/37f1e9de-57c2-4939-94e2-3ca91ccf2665)
 
-Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643
+Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643 (10th percentile)
 
 ## Version 19 & 19.1:
 Trying out a DecisionTreeRegressor model. On the mock test data, it didnt do as well and got an RMSLE score of 1.52. But if theres one thing i learned from the previous competition (predicting depression), its that the mock test data score could sometimes be very different from the actual score, although granted this kind of occurence is rare. Only one way to find out.
@@ -162,7 +162,7 @@ Fig 9:
 
 ![image](https://github.com/user-attachments/assets/29e21bd5-7d58-47bf-a9b8-dab2042d38a5)
 
-Current leaderboard position: 562/678
+Current leaderboard position - 562/678 (17th percentile, small improvement)
 
 ## Version 21: Switching it up with TensorFlow Neural Network 
 To start, i instantiated a Keras sequential model, fairly basic with just 3 layers including the input and output layer. Set the neurons in a decreasing manner starting from 128, but this is just the baseline and not the final neuron values. I may also change the layers depending on how the model is fitting. 
@@ -188,6 +188,13 @@ As you can see, there is a sharp drop in training RMSLE loss from the 1st epoch 
 
 Before submitting, lets give the model one final test on our mocktest data. RMSLE for this unseen mocktest data was 1.17 (2dp). Overall not a bad first fit, but there is still room for improvement. For now lets submit it first and see whats the public RMSLE score. 
 
-Edit: public RMSLE score - 
+Edit: public RMSLE score - 1.07498, current leaderboard position - 427/929 (54th percentile, big jump)
 
+## Version 25: Adjusting neuron(unit) number and batch size
+A very pleasant surpise to have such a huge improvement in score after using a relatively simple and default neural network model. But as mentioned in the previous version, there are still problems that need to be ironed out. One of which is the overfitting, which is indicated by the rapid reduction of training loss which contrasts to the miniscule dip in validation loss in the earlier epochs. This could be due to 3 reasons: 1) Too many neurons in the layers, aka model is too wide, 2) too many layers, aka model is too deep, or 3) batch_size value is too large during training. These three factors lead to the model learning incorrect patterns that have nothing to do with insurance premiums instead of fitting to general trends.
 
+Firstly ill reduce the number of neurons in the first dense layer from 128 to 64, and from 64 to 32 in the 2nd layer. Now lets look at the new loss values over the different epochs.
+
+screenshot_hereee
+
+Ummm
