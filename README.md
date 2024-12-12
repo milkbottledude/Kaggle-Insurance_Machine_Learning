@@ -190,14 +190,19 @@ Before submitting, lets give the model one final test on our mocktest data. RMSL
 
 Edit: public RMSLE score - 1.07498, current leaderboard position - 427/929 (54th percentile, big jump)
 
-## Version 25: Adjusting neuron(unit) number and batch size
+## Version 25: Adjusting neuron(unit) number.
 A very pleasant surpise to have such a huge improvement in score after using a relatively simple and default neural network model. But as mentioned in the previous version, there are still problems that need to be ironed out. One of which is the overfitting, which is indicated by the rapid reduction of training loss which contrasts to the miniscule dip in validation loss in the earlier epochs. This could be due to 3 reasons: 1) Too many neurons in the layers, aka model is too wide, 2) too many layers, aka model is too deep, or 3) batch_size value is too large during training. These three factors lead to the model learning incorrect patterns that have nothing to do with insurance premiums instead of fitting to general trends.
 
 Firstly ill reduce the number of neurons in the first dense layer from 128 to 64, and from 64 to 32 in the 2nd layer. Now lets look at the new loss values over the different epochs.
 
 screenshot_hereee
 
-Not much difference in training loss, and basically identical validation loss and mocktest data loss when neuron number was reduced. But there was no big decrease in training loss for the earlier epochs, which may mean that this is the best the model can do with the data given to it. Lets see if reducing the batch size from 100 to 50 will help.
+Not much difference in training loss, and basically identical validation loss and mocktest data loss when neuron number was reduced. But there was no big decrease in training loss for the earlier epochs, which may mean that this is the best the model can do with the data given to it. As i still have a few submissions available for today, ill submit this version with the reduced neuron number and see if theres any change in the public score.
+
+Edit: 
+
+# Version 26: Adjusting training batch_size
+Lets see if reducing the batch size from 100 to 50 will help.
 
 batchsize_screenshot hereee
 
