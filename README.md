@@ -180,4 +180,14 @@ metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to ha
 Before passing the datasets, i gotta convert them from pandas dataframes to numpy arrays. After that, we can train the model using the fit method. For the hyperparameters, starting with 10 for number of epochs. For batch_size, i decided to go with 100. I feel its a value thats not too big that the model overfits, but also not too small that it takes forever all the rows to be trained on. These values are just starter values and ill be adjusting them in the future if needed, depending on whether overfitting or underfitting occurs or if the time taken for training is too long.
 
 ## Version 24: Training the model
-As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. 
+As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs:
+
+screenshot_link_here
+
+As you can see, there is a sharp drop in training RMSLE loss from the 1st epoch to the 2nd, but a only a small drop in the validation loss, which might be a sign of overfitting. The training loss continues to drop slowly but surely over the epochs, while the validation loss stagnates for a while before eventually dropping to 1.16 at the end. 
+
+Before submitting, lets give the model one final test on our mocktest data. RMSLE for this unseen mocktest data was 1.17 (2dp). Overall not a bad first fit, but there is still room for improvement. For now lets submit it first and see whats the public RMSLE score. 
+
+Edit: public RMSLE score - 
+
+
