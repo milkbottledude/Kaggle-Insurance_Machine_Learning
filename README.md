@@ -197,4 +197,8 @@ Firstly ill reduce the number of neurons in the first dense layer from 128 to 64
 
 screenshot_hereee
 
-Ummm
+Not much difference in training loss, and basically identical validation loss and mocktest data loss when neuron number was reduced. But there was no big decrease in training loss for the earlier epochs, which may mean that this is the best the model can do with the data given to it. Lets see if reducing the batch size from 100 to 50 will help.
+
+batchsize_screenshot hereee
+
+
