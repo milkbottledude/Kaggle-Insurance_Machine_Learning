@@ -180,7 +180,9 @@ metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to ha
 Before passing the datasets, i gotta convert them from pandas dataframes to numpy arrays. After that, we can train the model using the fit method. For the hyperparameters, starting with 10 for number of epochs. For batch_size, i decided to go with 100. I feel its a value thats not too big that the model overfits, but also not too small that it takes forever all the rows to be trained on. These values are just starter values and ill be adjusting them in the future if needed, depending on whether overfitting or underfitting occurs or if the time taken for training is too long.
 
 ## Version 24: Training the model
-As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs:
+As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs (Fig 10):
+
+Fig 10:
 
 ![image](https://github.com/user-attachments/assets/55d45983-3762-4dfb-b2ee-2d4cf4411735)
 
@@ -191,9 +193,11 @@ Before submitting, lets give the model one final test on our mocktest data. RMSL
 Edit: public RMSLE score - 1.07498, current leaderboard position - 427/929 (54th percentile, big jump)
 
 ## Version 25: Adjusting neuron(unit) number.
-A very pleasant surpise to have such a huge improvement in score after using a relatively simple and default neural network model. But as mentioned in the previous version, there are still problems that need to be ironed out. One of which is the overfitting, which is indicated by the rapid reduction of training loss which contrasts to the miniscule dip in validation loss in the earlier epochs. This could be due to 3 reasons: 1) Too many neurons in the layers, aka model is too wide, 2) too many layers, aka model is too deep, or 3) batch_size value is too large during training. These three factors lead to the model learning incorrect patterns that have nothing to do with insurance premiums instead of fitting to general trends.
+A very pleasant surpise to have such a huge improvement in score after using a relatively simple and default neural network model. But as mentioned in the previous version, there are still problems that need to be ironed out. One of which might be overfitting, which is indicated by the rapid reduction of training loss which contrasts to the miniscule dip in validation loss in the earlier epochs. This could be due to 3 reasons: 1) Too many neurons in the layers, aka model is too wide, 2) too many layers, aka model is too deep, or 3) batch_size value is too large during training. These three factors lead to the model learning incorrect patterns that have nothing to do with insurance premiums instead of fitting to general trends.
 
-Firstly ill reduce the number of neurons in the first dense layer from 128 to 64, and from 64 to 32 in the 2nd layer. Now lets look at the new loss values over the different epochs.
+Firstly ill reduce the number of neurons in the first dense layer from 128 to 64, and from 64 to 32 in the 2nd layer. Now lets look at the new loss values over the different epochs (Fig 11).
+
+Fig 11:
 
 ![image](https://github.com/user-attachments/assets/e0ef0404-4aef-4ec9-869d-725e92475826)
 
@@ -202,7 +206,9 @@ Not much difference in training loss, and basically identical validation loss an
 Edit: public RMSLE score - 1.07607
 
 # Version 26: Adjusting training batch_size
-Lets see if reducing the batch size from 100 to 50 will help.
+Lets see if reducing the batch size from 100 to 50 will help (Fig 12).
+
+Fig 12:
 
 ![image](https://github.com/user-attachments/assets/9c1e4b31-0c8b-4759-a1cc-b92efd614144)
 
@@ -210,4 +216,21 @@ Performance worsened slightly surprisingly for the val loss (lowest value was 1.
 
 Edit: public RMSLE score - 1.07710
 
-## Version 27:
+## Version 27: Adjusting training batch_size (again)
+It could be that the big difference in training loss between the 1st and 2nd epoch was because it was the first time seeing the training data for the 1st epoch hence it had such a huge loss compared to 2nd epoch, and not because of overfitting like i had suspected in Version 24 and 25. In which case reducing batch size in Version 26 might have been a mistake as it introduced unnecessary noise that can mess with weight updates. As of right now im not sure if my model is overfitting or underfitting, so ill be experimenting abit. In this version ill try a higher batch_size, starting with 125. Heres the results of that (Fig 13).
+
+Fig 13:
+
+![image](https://github.com/user-attachments/assets/0bf14ec5-e81c-49c5-94bc-de625f5d48ed)
+
+After that i increased batch_size further to 150 (Fig 14):
+
+Figi 14:
+
+![image](https://github.com/user-attachments/assets/57a4488d-b822-4f62-a958-3e9c0f63c78a)
+
+Training and validation loss decreased when batch_size was increased from 100 to 125 but increased when batch_size went further up to 150, so 125 should be the sweet spot for batch_size value. Lets submit this version with batch_size 125 and see how the public score changes
+
+Edit: public RMSLE score - 1.07663
+
+## Version 28:
