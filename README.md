@@ -182,7 +182,7 @@ Before passing the datasets, i gotta convert them from pandas dataframes to nump
 ## Version 24: Training the model
 As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs:
 
-screenshot_link_here
+![image](https://github.com/user-attachments/assets/55d45983-3762-4dfb-b2ee-2d4cf4411735)
 
 As you can see, there is a sharp drop in training RMSLE loss from the 1st epoch to the 2nd, but a only a small drop in the validation loss, which might be a sign of overfitting. The training loss continues to drop slowly but surely over the epochs, while the validation loss stagnates for a while before eventually dropping to 1.16 at the end. 
 
@@ -195,15 +195,19 @@ A very pleasant surpise to have such a huge improvement in score after using a r
 
 Firstly ill reduce the number of neurons in the first dense layer from 128 to 64, and from 64 to 32 in the 2nd layer. Now lets look at the new loss values over the different epochs.
 
-screenshot_hereee
+![image](https://github.com/user-attachments/assets/e0ef0404-4aef-4ec9-869d-725e92475826)
 
-Not much difference in training loss, and basically identical validation loss and mocktest data loss when neuron number was reduced. But there was no big decrease in training loss for the earlier epochs, which may mean that this is the best the model can do with the data given to it. As i still have a few submissions available for today, ill submit this version with the reduced neuron number and see if theres any change in the public score.
+Not much difference in training loss, and basically identical validation loss and mocktest data loss (still 1.17 (2dp)) when neuron number was reduced. But there was no big decrease in training loss for the earlier epochs, which may mean that this is the best the model can do with the data given to it. As i still have a few submissions available for today, ill submit this version with the reduced neuron number and see if theres any change in the public score.
 
-Edit: 
+Edit: public RMSLE score - 1.07607
 
 # Version 26: Adjusting training batch_size
 Lets see if reducing the batch size from 100 to 50 will help.
 
-batchsize_screenshot hereee
+![image](https://github.com/user-attachments/assets/9c1e4b31-0c8b-4759-a1cc-b92efd614144)
 
+Performance worsened slightly surprisingly for the val loss (lowest value was 1.17 instead of 1.16 in previous versions) and mocktest loss (1.18 compared to 1.17 previously). Correspondingly, public RMSLE score also was slightly worse. I had thought overfitting was the problem so reducing batch size to introduce noise would be a viable solution, but apparently not. Back to the drawing board.
 
+Edit: public RMSLE score - 1.07710
+
+## Version 27:
