@@ -229,8 +229,37 @@ Figi 14:
 
 ![image](https://github.com/user-attachments/assets/57a4488d-b822-4f62-a958-3e9c0f63c78a)
 
-Training and validation loss decreased when batch_size was increased from 100 to 125 but increased when batch_size went further up to 150, so 125 should be the sweet spot for batch_size value. Lets submit this version with batch_size 125 and see how the public score changes
+Training and validation loss decreased when batch_size was increased from 100 to 125 but increased when batch_size went further up to 150. Lets submit this version with batch_size 125 and see how the public score changes.
 
 Edit: public RMSLE score - 1.07663
 
-## Version 28:
+
+## Version 28: Adjusting number of layers
+In this version i add an extra layer just before the output layer in the keras model and slapped it with 32 neurons and the same activation function as the other hidden layers (relu). If val loss increases, that means the model is overfitting and no extra layer is needed. However, the results (Fig 15) are very similar to not having an extra layer (see Fig 10), in fact its slightly better with its last epoch having a val loss of 1.65 compared to 1.66 in Fig 10. This is a good sign that the extra layer is not causing the model to overfit. Also its loss when tested with the mocktest data is also the same at 1.16 (2dp).
+
+Fig 15:
+
+![image](https://github.com/user-attachments/assets/aec55a63-957f-4a8f-a32e-d527f64a1c29)
+
+Edit: public RMSLE score - 1.07813
+
+
+## Version 29: Scaling data
+For the previous models like forest classifiers (which do not require scaling) and linear regression (which benefit very slightly or not at all from scaling), scaling is not really necessary. But neural networks are trained in such a way that make them sensitive to the scale of the variables, so in this version im just going to apply some minmax scaling to all the input data. Reverting back to just 4 layers since adding another didnt improve public score. After scaling and training, the results are super identical to Fig 10, the val loss for the last few epochs differing by only around 0.0001. However, when fitted with the entire training dataset (all 1.2m rows), the difference starts to show. Below (Fig 16) shows the results when the input is not scaled (from Version 24), and Fig 17 shows when the input is scaled.
+
+Fig 16 (unscaled):
+
+![image](https://github.com/user-attachments/assets/6dcf6bf1-9940-45b4-a620-474a3ea88990)
+
+Fig 17 (scaled):
+
+![image](https://github.com/user-attachments/assets/8e7208d8-af13-4694-b86b-28d266f4b9a5)
+
+As you can see the loss in the final epoch is visibily greater when the data is unscaled at 1.1618 compared to when the data is scaled, which is 1.1517. I only hope that this is also reflected in the public score.
+
+Edit: public RMSLE score - 1.0730, current leaderboard position - 480/1055 (55th percentile) 
+
+only a single percentile increase but LESGOOOOO finally an improvement
+
+## Version 30: 
+Funny how after all that tuning, the thing that got the score to improve was just some damn scaling.
