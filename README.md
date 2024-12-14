@@ -249,17 +249,27 @@ For the previous models like forest classifiers (which do not require scaling) a
 
 Fig 16 (unscaled):
 
-![image](https://github.com/user-attachments/assets/6dcf6bf1-9940-45b4-a620-474a3ea88990)
+![image](https://github.com/user-attachments/assets/6b74b222-4fda-4448-bce4-9bce70c4e539)
 
 Fig 17 (scaled):
 
-![image](https://github.com/user-attachments/assets/8e7208d8-af13-4694-b86b-28d266f4b9a5)
+![image](https://github.com/user-attachments/assets/e5a208de-c5b1-411a-9d29-707a714bb9f4)
 
 As you can see the loss in the final epoch is visibily greater when the data is unscaled at 1.1618 compared to when the data is scaled, which is 1.1517. I only hope that this is also reflected in the public score.
 
 Edit: public RMSLE score - 1.0730, current leaderboard position - 480/1055 (55th percentile) 
 
-only a single percentile increase but LESGOOOOO finally an improvement
+only a single percentile increase but LESGOOOOO finally an improvement. Funny how after all that tuning, the thing that got the score to improve was some damn scaling.
 
-## Version 30: 
-Funny how after all that tuning, the thing that got the score to improve was just some damn scaling.
+## Version 30: Adjusting number of epochs
+Now that we have tinkered with the layers and neurons, its time to shift our focus to epoch number, which is basically the number of times the model 'goes through' the training data fed to it. Kind of like when you go through a textbook before going into a test. However, unlike when you are revising your textbook, looking through the data too many times can be bad for the model, so now we are going to try and find the optimal epoch for our dataset. Since we started using the nn tensorflow model (Version 21), the epoch number has been set at a nice 10. Lets see what happens at different epochs. 
+
+To visualise how the RMSLE varies with epoch number, we are going to set the epoch number at a high number that should have a high probability of including the optimal epoch number, say 30. Then we are going to access all the loss values using the code "history.history['val_loss']" and plot them on a graph against epoch number.
+
+Fig 18 (graph of val_loss against epoch number):
+
+here
+
+We typically want loss values less than 1.15
+
+
