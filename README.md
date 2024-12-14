@@ -262,11 +262,13 @@ Edit: public RMSLE score - 1.0730, current leaderboard position - 480/1055 (55th
 only a single percentile increase but LESGOOOOO finally an improvement. Funny how after all that tuning, the thing that got the score to improve was some damn scaling.
 
 ## Version 30: Adjusting number of epochs
-Now that we have tinkered with the layers and neurons, its time to shift our focus to epoch number, which is basically the number of times the model 'goes through' the training data fed to it. Kind of like when you go through a textbook before going into a test. However, unlike when you are revising your textbook, looking through the data too many times can be bad for the model, so now we are going to try and find the optimal epoch for our dataset. Since we started using the nn tensorflow model (Version 21), the epoch number has been set at a nice 10. Lets see what happens at different epochs. 
+Now that we have tinkered with the layers and neurons, its time to shift our focus to epoch number, which is basically the number of times the model 'goes through' the training data fed to it. Kind of like when you go through a textbook before going into a test. However, unlike when you are revising your textbook, looking through the data too many times can be bad for the model, so now we are going to try and find the optimal epoch for our dataset. Since we started using the nn tensorflow model (Version 21), the epoch number has been set at a nice 10. And from the 9th to the 10th epoch, the losses are still decreasing, so theres a possibility that theres a greater epoch number with an even lower loss. To find this magic epoch number, we need to look at a wide range of epochs beyond 10. 
 
-To visualise how the RMSLE varies with epoch number, we are going to set the epoch number at a high number that should have a high probability of including the optimal epoch number, say 30. Then we are going to access all the loss values using the code "history.history['val_loss']" and plot them on a graph against epoch number.
+To visualise how the RMSLE varies with epoch number, we are going to set the epoch number at a high number that should have a high probability of including the optimal epoch number, say 40. Then we are going to access all the loss values using the code "history.history['val_loss']" and plot them against epoch number on a simple line graph.
 
-Fig 18 (graph of val_loss against epoch number):
+Edit: ok apparently the optimum epoch number is greater than 40 because leading up to the 40th epoch, the loss is still going down. Thats great, that means this model has the potential to predict with a much lower loss than we thought, so now im going to increase the epoch number from 40 to 60.
+
+Fig 18 (graph of val_loss and train_loss against epoch number):
 
 here
 
