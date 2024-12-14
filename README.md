@@ -266,7 +266,7 @@ Now that we have tinkered with the layers and neurons, its time to shift our foc
 
 To visualise how the RMSLE varies with epoch number, we are going to set the epoch number at a high number that should have a high probability of including the optimal epoch number, say 40. Then we are going to access all the loss values using the code "history.history['val_loss']" and plot them against epoch number on a simple line graph.
 
-Edit: ok apparently the optimum epoch number is greater than 40 because leading up to the 40th epoch, the loss is still going down. Thats great, that means this model has the potential to predict with a much lower loss than we thought, so now im going to increase the epoch number from 40 to 60.
+Edit: ok apparently the optimum epoch number is greater than 40 because leading up to the 40th epoch, the loss is still going down. Thats great, that means this model has the potential to predict with a much lower loss than we thought, so now im going to increase the epoch number from 40 to 75.
 
 Fig 18 (graph of val_loss and train_loss against epoch number):
 
