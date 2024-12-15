@@ -268,10 +268,25 @@ To visualise how the RMSLE varies with epoch number, we are going to set the epo
 
 Edit: ok apparently the optimum epoch number is greater than 40 because leading up to the 40th epoch, the loss is still going down. Thats great, that means this model has the potential to predict with a much lower loss than we thought, so now im going to increase the epoch number from 40 to 75.
 
-Fig 18 (graph of val_loss and train_loss against epoch number):
+Fig 18 (val_loss and train_loss against epochs, 75 epochs):
 
-here
+![image](https://github.com/user-attachments/assets/f757507e-569e-4410-b78e-bb01623c7733)
 
-We typically want loss values less than 1.15
+Looks like the loss is still decreasing even at the last few epochs, which is good news. Lets jump to 100 epochs and see if the loss becomes stagnant.
+
+Fig 19(val_loss and train_loss against epochs, 100 epochs):
+
+![image](https://github.com/user-attachments/assets/e3361763-48db-4ba2-a1d0-74f3b7661bf7)
+ 
+As you can see the val_loss continues to decrease (highlighted in yellow) up until epoch 93, after which it levels out and hovers around 1.503 and 1.504 (highlighted in green).
+
+Fig 20(actual val_loss values at last few epochs near to 100):
+
+![image](https://github.com/user-attachments/assets/fa66ffb2-3126-43ad-bbb4-d9f53cc496aa)
+
+However when getting ready to submit this version and fitting the entire training dataset (cuz i only fitted about 70% of the training set earlier leaving 30% for validation), i noticed even at 100 epochs that the loss was still reducing. Granted it was the train_loss but the rate it was reducing was still relatively large, which leads me to think that the val loss might be even lower with an epoch number greater than 100. We can explore that possibility in the next version, but for now im just going to submit this 100 epoch version and see how well it does.
+
+Edit: public RMSLE score - 
 
 
+## Version 31: Adjusting number of epochs (again)
