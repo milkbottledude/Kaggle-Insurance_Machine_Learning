@@ -284,9 +284,24 @@ Fig 20(actual val_loss values at last few epochs near to 100):
 
 ![image](https://github.com/user-attachments/assets/fa66ffb2-3126-43ad-bbb4-d9f53cc496aa)
 
-However when getting ready to submit this version and fitting the entire training dataset (cuz i only fitted about 70% of the training set earlier leaving 30% for validation), i noticed even at 100 epochs that the loss was still reducing. Granted it was the train_loss but the rate it was reducing was still relatively large, which leads me to think that the val loss might be even lower with an epoch number greater than 100. We can explore that possibility in the next version, but for now im just going to submit this 100 epoch version and see how well it does.
+For now im just going to submit this 100 epoch version and see how well it does.
+
+Edit: public RMSLE score - 1.06686, current leaderboard position - 496/1127 (56th percentile)
+
+Another 1 percentile increase, but we take wins no matter how small. First time breaking through RMSLE of 1.07 as well, im happy.
+
+## Version 31: Adjusting number of epochs (again)
+Increasing epoch number to 200 to really make sure beyond doubt that the optimal epoch number was covered. You might think this is excessive, but previously when getting ready to submit the 100 epoch version and fitting the entire training dataset (cuz i only fitted about 70% of the training set earlier leaving 30% for validation), i noticed even at 100 epochs that the loss(when fitting the entire training set not the train_test_split) was still reducing. Granted it was the train_loss but the rate it was reducing was still relatively large, which leads me to think that the val loss might be even lower with an epoch number greater than 100. 
+
+To really see how well the entire training data is fitting at the end, ive set the validation_split at 0.05. I set it really small to use as much training data as possible for fitting the final model WHILE still having an indication of where the model starts to overfit and the val_loss stops decreasing. 
+
+Fig 21(val loss against epochs for final fit using 0.05 of training data as val data):
+
+![image](https://github.com/user-attachments/assets/b992edcf-d807-444d-b479-cbf08db43496)
+
+The loss in Fig 21 above starts to stop decreasing notably at around 150 epochs, take note of the different y-axis scale. This proves that the model does continue to improve past 100 epochs, but is that also the case for the actual test data though. In theory yes, but there have been many times when loss was decreasing during training but higher than expected in the public RMSLE ill do another submission with 150 epochs in this version and see if the public score increases.
 
 Edit: public RMSLE score - 
 
+## Version 32: 
 
-## Version 31: Adjusting number of epochs (again)
