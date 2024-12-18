@@ -162,7 +162,7 @@ Fig 9:
 
 ![image](https://github.com/user-attachments/assets/29e21bd5-7d58-47bf-a9b8-dab2042d38a5)
 
-Current leaderboard position - 562/678 (17th percentile, small improvement)
+New leaderboard position - 562/678 (17th percentile, small improvement)
 
 ## Version 21: Switching it up with TensorFlow Neural Network 
 To start, i instantiated a Keras sequential model, fairly basic with just 3 layers including the input and output layer. Set the neurons in a decreasing manner starting from 128, but this is just the baseline and not the final neuron values. I may also change the layers depending on how the model is fitting. 
@@ -190,7 +190,7 @@ As you can see, there is a sharp drop in training RMSLE loss from the 1st epoch 
 
 Before submitting, lets give the model one final test on our mocktest data. RMSLE for this unseen mocktest data was 1.17 (2dp). Overall not a bad first fit, but there is still room for improvement. For now lets submit it first and see whats the public RMSLE score. 
 
-Edit: public RMSLE score - 1.07498, current leaderboard position - 427/929 (54th percentile, big jump)
+Edit: public RMSLE score - 1.07498, new leaderboard position - 427/929 (54th percentile, big jump)
 
 ## Version 25: Adjusting neuron(unit) number.
 A very pleasant surpise to have such a huge improvement in score after using a relatively simple and default neural network model. But as mentioned in the previous version, there are still problems that need to be ironed out. One of which might be overfitting, which is indicated by the rapid reduction of training loss which contrasts to the miniscule dip in validation loss in the earlier epochs. This could be due to 3 reasons: 1) Too many neurons in the layers, aka model is too wide, 2) too many layers, aka model is too deep, or 3) batch_size value is too large during training. These three factors lead to the model learning incorrect patterns that have nothing to do with insurance premiums instead of fitting to general trends.
@@ -257,7 +257,7 @@ Fig 17 (scaled):
 
 As you can see the loss in the final epoch is visibily greater when the data is unscaled at 1.1618 compared to when the data is scaled, which is 1.1517. I only hope that this is also reflected in the public score.
 
-Edit: public RMSLE score - 1.0730, current leaderboard position - 480/1055 (55th percentile) 
+Edit: public RMSLE score - 1.0730, new leaderboard position - 480/1055 (55th percentile) 
 
 only a single percentile increase but LESGOOOOO finally an improvement. Funny how after all that tuning, the thing that got the score to improve was some damn scaling.
 
@@ -286,7 +286,7 @@ Fig 20(actual val_loss values at last few epochs near to 100):
 
 For now im just going to submit this 100 epoch version and see how well it does.
 
-Edit: public RMSLE score - 1.06686, current leaderboard position - 496/1127 (56th percentile)
+Edit: public RMSLE score - 1.06686, new leaderboard position - 496/1127 (56th percentile)
 
 Another 1 percentile increase, but we take wins no matter how small. First time breaking through RMSLE of 1.07 as well, im happy.
 
@@ -301,6 +301,16 @@ Fig 21(val loss against epochs for final fit using 0.05 of training data as val 
 
 The loss in Fig 21 above starts to stop decreasing notably at around 150 epochs, take note of the different y-axis scale. This proves that the model does continue to improve past 100 epochs, but is that also the case for the actual test data though. In theory yes, but there have been many times when loss was decreasing during training but higher than expected in the public RMSLE ill do another submission with 150 epochs in this version and see if the public score increases.
 
-Edit: public RMSLE score - 1.06437, current leaderboard position - 578/1329 (57th percentile)
+Edit: public RMSLE score - 1.06437, new leaderboard position - 578/1329 (57th percentile)
+
+To not waste your time reading how i trial and error different epoch values, i went ahead and tried submitting with 200, 225 and 250 epochs. Here are the results -
+
+200 epochs: public RMSLE score - 1.06389, new leaderboard position - 568/1348 (58th percentile)
+
+225 epochs:
+
+250 epochs: public RMSLE score - 1.06533
+
+At 200 the RMSLE decreased showing the model was far from its optimum epoch number at 150 epochs, but at 250 there was an increase in RMSLE that is greater than that of 150 epochs, an obvious sign of overfitting.
 
 ## Version 32: 
