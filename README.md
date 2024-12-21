@@ -136,7 +136,7 @@ This way, unnecessary columns wont be created. Originally 2 separate columns for
 ## Version 16: Training RandomForestRegressor model
 Set up the RandomForestRegressor model as well as a simple function that returns the RMSLE when u pass the predicted and actual y values from the mocktest data. Got a RMSLE value of 1.16(2dp) from a stock rfr model with no custom hyperparams except random_state. The top score on the leaderboard is currently 1.03(2dp), so we have work to do. For now ill submit it and see the public RMSLE score.
 
-# Version 17: Resorting to Linear Regression
+# Version 17: Using Linear Regression
 Submission couldnt go thru as the test data with 800k rows couldnt be predicted, my laptop sounds like a boeing rn. Prob cuz the model had to fit 720k training data from the train_test_split and predict 480k mock test data, before predicting 800k rows from the real test dataset. Nothing like the depression dataset which consisted of only 141k total training rows and 93.8k test rows. Switching to a more simpler LinearRegressor model, but will defo use a more in-depth machine learning model in the future, i have a few in mind. LinearRegressor is a simple model but did better than i thought, getting a RMSLE score of 1.17 (2dp). But when i try to predict with the test dataset, i keep running out of damn ram. I hope to find the problem soon, but rn im stumped.
 
 # Version 18: Finally found the problem
@@ -311,9 +311,12 @@ To not waste your time reading how i trial and error different epoch values, i w
 
 At 200 the RMSLE decreased showing the model was far from its optimum epoch number at 150 epochs, but at 250 there was an increase in RMSLE that is greater than that of 150 epochs, an obvious sign of overfitting.
 
-## Version 32: Fiddling with datetime values pt 1
-I've messed with hyperparameters enough, so in this version i want to focus more on the actual variables, one of which is the datetime column. As you know i created called get_dummies too create dummy columns for the month portion of the datetime values, essentially creating 12 columns for each month. However, i recently learned that having all 12 introduces multicollinearity. For example, if you see that the value for every column representing the months January to November is 'False', you automatically know that December is 'True'.
+## Version 32, 32.2 & 32.3: Fiddling with datetime values pt 1
+I've messed with hyperparameters enough, so in this version i want to focus more on the actual variables, one of which is the datetime column. As you know i created called get_dummies to create dummy columns for the month portion of the datetime values (Version 14), essentially creating 12 columns for each month. However, i recently learned that having all 12 introduces multicollinearity. For example, if you see that the value for every column representing the months January to November is 'False', you automatically know that December is 'True'. However i like the month of December, so if i had to get rid of a month it would be January. Also im going to comment out the fitting of the mock training data, which is the fraction of the whole training data that i split using train_test_split, to save time during submission. A single 200 epoch fitting already takes a long time, id rather not do it twice for every submission.
 
-Edit: public RMSLE score - here, new leaderboard position - here (hereth percentile)
+Edit: public RMSLE score - 1.06561 
 
-## Version 32: Fiddling with datetime values pt 2
+Not too sure why it did worse, in theory it should have improved because everything was the same as version 31 which was the version that got the best public score so far. Edit: i think it may have something to do with the 'keras.utils.set_random_seed(0)' code, which by right is supposed to make all random operations that occur during the creation and training of the model (such as setting of weights etc) constant whenever the code is run for result reproducibility, but apparently this is an outdated way to set random seed, a fault on my part. Future version will use the more recent 'tf.random.set_seed(0)' to set constant random seed. To test this ill be submitting an exact replica of Version 31 and seeing if the results are still 1.06389.
+
+## Version 33: Fiddling with datetime values pt 2
+Now i will be trying out this other cool new data prepping method for datetime values called 'cyclic encoding', sounds very cool i know. What is unique about the month portion in the datetime values is that they are cyclic, meaning although December is the 12th month and January is the 1st, the 2 months are actually right next to each other even though their numbers are not (12 and 1). This new method is basically just applying both the sin and cos function to the month numbers which accounts for the cyclic nature of the data.
