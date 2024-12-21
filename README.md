@@ -303,14 +303,17 @@ The loss in Fig 21 above starts to stop decreasing notably at around 150 epochs,
 
 Edit: public RMSLE score - 1.06437, new leaderboard position - 578/1329 (57th percentile)
 
-To not waste your time reading how i trial and error different epoch values, i went ahead and tried submitting with 200, 225 and 250 epochs. Here are the results -
+To not waste your time reading how i trial and error different epoch values, i went ahead and tried submitting with 200 and 250 epochs. Here are the results -
 
 200 epochs: public RMSLE score - 1.06389, new leaderboard position - 568/1348 (58th percentile)
-
-225 epochs:
 
 250 epochs: public RMSLE score - 1.06533
 
 At 200 the RMSLE decreased showing the model was far from its optimum epoch number at 150 epochs, but at 250 there was an increase in RMSLE that is greater than that of 150 epochs, an obvious sign of overfitting.
 
-## Version 32: 
+## Version 32: Fiddling with datetime values pt 1
+I've messed with hyperparameters enough, so in this version i want to focus more on the actual variables, one of which is the datetime column. As you know i created called get_dummies too create dummy columns for the month portion of the datetime values, essentially creating 12 columns for each month. However, i recently learned that having all 12 introduces multicollinearity. For example, if you see that the value for every column representing the months January to November is 'False', you automatically know that December is 'True'.
+
+Edit: public RMSLE score - here, new leaderboard position - here (hereth percentile)
+
+## Version 32: Fiddling with datetime values pt 2
