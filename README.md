@@ -321,6 +321,14 @@ Not too sure why it did worse, in theory it should have improved because everyth
 ## Version 33: Fiddling with datetime values pt 2
 Now i will be trying out this other cool new data prepping method for datetime values called 'cyclic encoding', sounds very cool i know. What is unique about the month portion in the datetime values is that they are cyclic, meaning although December is the 12th month and January is the 1st, the 2 months are actually right next to each other even though their numbers are not (12 and 1). This new method is basically just applying both the sin and cos function to the month numbers which accounts for the cyclic nature of the data. This may not beat our all time best score of 1.06389 due to the random seed problem which stopped us from being able to reproduce results, but it should beat 1.06448, which is the score we got after changing the random seed line of code.
 
-Edit: public RMSLE score - 
+Edit: public RMSLE score - 1.06547
 
-Always remember to change your neural network model's input layer shape after feature engineering. Dont be like me who left the notebook running for 2 hours, just to come back and see an error message at the fitting stage.
+Always remember to change your neural network model's input layer shape after feature engineering. Dont be like me who left the notebook running for 2 hours, just to come back and see an error message at the fitting stage. 
+
+And thats the end of the competition, here is my final standing with the rest of the test data used by Kaggle to compute the final leaderboard at the end of the 30 day competition duration:
+
+Final public RMSLE score - 1.06612, Final leaderboard position - 1074/2392 (55th percentile)
+
+Some parting words, this was fun. Big learning point from this project was definitely neural networks, and learning it was certainly an ordeal. Not just tuning and feature engineering, but just prepping the data to be put into the model and learning HOW to put the data into the model, creating layers etc was also difficult to pick up. But totally worth it when i saw the RMSLE score improve by so much and the leaderboard position shoot up. Neural networks definitely have a big advantage over traditional regression or tree classifier models in many ways, particularly handling non linearity in the data. So im very glad to have been given the opportunity to learn and practice this type of machine learning model on a dataset as large and interesting as this insurance one. Im looking forward to the next project where i can test out my new neural network skills as well as improve my tuning of the model. 
+
+If you have read this far, thank you so much, i hope this was as informative and enjoyable to you as it was for me. Have a good day, dont forget to drink water ok. aight byee :)
