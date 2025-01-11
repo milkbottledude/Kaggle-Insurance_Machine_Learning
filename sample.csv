@@ -1,0 +1,100 @@
+id,Age,Gender,Annual Income,Marital Status,Number of Dependents,Education Level,Occupation,Health Score,Location,Policy Type,Previous Claims,Vehicle Age,Credit Score,Insurance Duration,Policy Start Date,Customer Feedback,Smoking Status,Exercise Frequency,Property Type
+1200000,28.0,Female,2310.0,,4.0,Bachelor's,Self-Employed,7.657980871690055,Rural,Basic,,19.0,,1.0,2023-06-04 15:21:39.245086,Poor,Yes,Weekly,House
+1200001,31.0,Female,126031.0,Married,2.0,Master's,Self-Employed,13.381379129898113,Suburban,Premium,,14.0,372.0,8.0,2024-04-22 15:21:39.224915,Good,Yes,Rarely,Apartment
+1200002,47.0,Female,17092.0,Divorced,0.0,PhD,Unemployed,24.35452677104481,Urban,Comprehensive,,16.0,819.0,9.0,2023-04-05 15:21:39.134960,Average,Yes,Monthly,Condo
+1200003,28.0,Female,30424.0,Divorced,3.0,PhD,Self-Employed,5.136225172573498,Suburban,Comprehensive,1.0,3.0,770.0,5.0,2023-10-25 15:21:39.134960,Poor,Yes,Daily,House
+1200004,24.0,Male,10863.0,Divorced,2.0,High School,Unemployed,11.844155273016064,Suburban,Premium,,14.0,755.0,7.0,2021-11-26 15:21:39.259788,Average,No,Weekly,House
+1200005,43.0,Male,52370.0,Married,2.0,Bachelor's,,5.386224097503545,Suburban,Basic,,15.0,432.0,2.0,2022-07-08 15:21:39.223901,,No,Rarely,Condo
+1200006,21.0,Female,5896.0,Married,3.0,Master's,,14.773963327517178,Rural,Comprehensive,1.0,14.0,321.0,8.0,2023-11-12 15:21:39.288099,Good,No,Monthly,Condo
+1200007,44.0,Male,31855.0,Divorced,3.0,Bachelor's,,20.84790038218032,Suburban,Premium,,8.0,712.0,1.0,2021-03-12 15:21:39.149731,Poor,Yes,Monthly,Apartment
+1200008,32.0,Female,76463.0,Divorced,4.0,PhD,,22.988787184415298,Suburban,Basic,0.0,1.0,540.0,2.0,2021-07-08 15:21:39.169102,Average,No,Weekly,Apartment
+1200009,48.0,Female,27982.0,Married,2.0,High School,,43.56743256784159,Urban,Premium,1.0,15.0,757.0,7.0,2021-02-15 15:21:39.134960,Good,Yes,Daily,House
+1200010,44.0,Male,24238.0,Divorced,0.0,Master's,Unemployed,20.769331513555404,Rural,Premium,0.0,11.0,408.0,3.0,2021-06-25 15:21:39.134960,Poor,No,Daily,Condo
+1200011,63.0,Male,5824.0,Divorced,2.0,Master's,Unemployed,13.430513560856316,Urban,Comprehensive,0.0,9.0,849.0,9.0,2024-05-07 15:21:39.123711,Good,Yes,Weekly,House
+1200012,23.0,Female,44943.0,Single,4.0,Bachelor's,Unemployed,43.96863908629584,Rural,Premium,,11.0,818.0,2.0,2022-10-16 15:21:39.229482,Poor,No,Monthly,Apartment
+1200013,60.0,Male,44769.0,Married,2.0,Master's,Self-Employed,20.83718588746164,Suburban,Comprehensive,1.0,14.0,621.0,4.0,2020-01-21 15:21:39.204790,Good,No,Weekly,Apartment
+1200014,46.0,Female,66984.0,Single,0.0,Bachelor's,Unemployed,16.490747098881283,Urban,Premium,1.0,12.0,319.0,2.0,2020-04-07 15:21:39.246098,Poor,No,Monthly,House
+1200015,47.0,Female,46256.0,Divorced,3.0,Master's,Self-Employed,46.9361251718319,Rural,Comprehensive,,18.0,542.0,1.0,2024-08-09 15:21:39.090124,Poor,No,Rarely,Apartment
+1200016,43.0,Male,15259.0,Married,,PhD,Employed,7.92260766780615,Suburban,Basic,,13.0,602.0,5.0,2022-11-29 15:21:39.254678,Good,Yes,Weekly,Condo
+1200017,47.0,Male,,Divorced,1.0,Bachelor's,Employed,25.713836967506182,Urban,Basic,0.0,16.0,595.0,1.0,2021-01-19 15:21:39.274993,Average,No,Monthly,House
+1200018,42.0,Female,1807.0,Married,1.0,PhD,Unemployed,13.149865396833578,Urban,Comprehensive,,2.0,468.0,6.0,2023-03-05 15:21:39.119168,Good,No,Daily,Condo
+1200019,64.0,Male,88483.0,Divorced,4.0,Bachelor's,Unemployed,4.362879212992994,Suburban,Basic,1.0,13.0,318.0,1.0,2024-04-26 15:21:39.111551,Poor,Yes,Daily,Condo
+1200020,56.0,Female,92683.0,Married,4.0,Bachelor's,,49.44593700725958,Urban,Comprehensive,,1.0,382.0,6.0,2019-11-28 15:21:39.278402,Poor,Yes,Rarely,Condo
+1200021,49.0,Female,5048.0,Divorced,3.0,PhD,,28.932806131969866,Urban,Comprehensive,1.0,16.0,,2.0,2021-01-05 15:21:39.289099,Good,No,Monthly,Condo
+1200022,36.0,Female,141354.0,Married,,Bachelor's,,23.079780892528245,Suburban,Basic,,19.0,515.0,8.0,2020-09-29 15:21:39.247098,Good,Yes,Monthly,Apartment
+1200023,46.0,Female,61573.0,Divorced,4.0,High School,,,Urban,Basic,3.0,14.0,731.0,1.0,2020-10-02 15:21:39.114118,Good,Yes,Daily,Apartment
+1200024,46.0,Male,1384.0,Divorced,0.0,High School,,50.84849760874194,Urban,Basic,1.0,13.0,388.0,9.0,2021-09-08 15:21:39.281787,Poor,Yes,Rarely,Apartment
+1200025,34.0,Male,3620.0,,1.0,High School,Self-Employed,34.98443335531182,Suburban,Comprehensive,0.0,13.0,466.0,8.0,2020-12-04 15:21:39.237118,Good,Yes,Weekly,Apartment
+1200026,60.0,Male,4938.0,Single,1.0,High School,Self-Employed,11.649744767049466,Suburban,Comprehensive,,16.0,758.0,5.0,2023-12-17 15:21:39.237118,Average,No,Rarely,Condo
+1200027,23.0,Female,62556.0,Single,0.0,PhD,Self-Employed,25.4501958463949,Urban,Comprehensive,0.0,16.0,552.0,9.0,2020-08-17 15:21:39.282785,Good,Yes,Monthly,Apartment
+1200028,61.0,Male,95531.0,Divorced,2.0,PhD,,27.56712388942777,Urban,Comprehensive,1.0,13.0,731.0,2.0,2020-07-13 15:21:39.095696,Good,No,Rarely,House
+1200029,39.0,Female,11187.0,Married,0.0,Master's,Self-Employed,21.31091240440817,Suburban,Premium,0.0,2.0,770.0,8.0,2021-09-22 15:21:39.267454,Poor,Yes,Weekly,House
+1200030,51.0,Female,15782.0,Married,3.0,PhD,Employed,12.896696608326042,Suburban,Comprehensive,,13.0,797.0,8.0,2020-03-25 15:21:39.188220,Average,Yes,Weekly,House
+1200031,32.0,Female,29087.0,Divorced,0.0,PhD,,30.16485026441264,Urban,Comprehensive,2.0,9.0,699.0,6.0,2023-03-30 15:21:39.155231,Average,No,Rarely,Apartment
+1200032,34.0,Male,91052.0,Married,3.0,High School,Employed,,Rural,Comprehensive,1.0,11.0,324.0,5.0,2024-05-09 15:21:39.246098,Average,Yes,Weekly,Condo
+1200033,53.0,Male,17984.0,Divorced,0.0,PhD,Self-Employed,28.79741562611138,Rural,Basic,0.0,2.0,524.0,8.0,2019-12-30 15:21:39.134960,Average,Yes,Rarely,Condo
+1200034,35.0,Female,15963.0,Married,3.0,PhD,,24.737239867957268,Rural,Basic,0.0,4.0,727.0,9.0,2023-08-01 15:21:39.290098,Average,Yes,Weekly,Condo
+1200035,57.0,Female,6914.0,Married,,PhD,Unemployed,33.25431043757868,Urban,Comprehensive,,6.0,640.0,9.0,2019-10-21 15:21:39.169102,Poor,Yes,Weekly,House
+1200036,31.0,Female,14028.0,Divorced,2.0,Master's,Employed,27.295841918832785,Suburban,Comprehensive,2.0,19.0,719.0,2.0,2021-10-30 15:21:39.134960,Average,No,Monthly,Condo
+1200037,24.0,Male,79929.0,Married,3.0,Bachelor's,Self-Employed,15.889819827487736,Urban,Comprehensive,1.0,5.0,496.0,3.0,2020-02-02 15:21:39.134960,Poor,No,Weekly,Apartment
+1200038,21.0,Female,27281.0,Married,3.0,PhD,Unemployed,36.76477421028015,Urban,Basic,,0.0,766.0,7.0,2020-03-13 15:21:39.085129,Average,No,Rarely,Condo
+1200039,40.0,Female,4920.0,Married,2.0,Master's,Unemployed,48.13197050752389,Suburban,Comprehensive,,16.0,503.0,4.0,2022-11-27 15:21:39.080440,Poor,Yes,Rarely,Apartment
+1200040,20.0,Male,8954.0,Single,2.0,PhD,,43.42481138526007,Urban,Premium,0.0,10.0,513.0,8.0,2023-10-10 15:21:39.276901,Average,No,Monthly,Apartment
+1200041,30.0,Male,10696.0,Married,4.0,High School,Unemployed,19.86942269675888,Urban,Basic,0.0,11.0,498.0,8.0,2022-03-08 15:21:39.112553,Good,No,Monthly,Condo
+1200042,58.0,Male,104775.0,Married,3.0,Master's,Self-Employed,13.792501447892752,Urban,Comprehensive,,15.0,411.0,6.0,2022-06-28 15:21:39.094752,Good,No,Daily,Condo
+1200043,54.0,Male,44019.0,Divorced,1.0,High School,Employed,32.2599649063091,Urban,Premium,0.0,14.0,619.0,9.0,2020-06-29 15:21:39.278402,Poor,No,Monthly,House
+1200044,20.0,Male,21244.0,Married,1.0,Master's,Employed,34.27379788250476,Urban,Basic,,7.0,704.0,8.0,2023-08-09 15:21:39.265513,Poor,Yes,Monthly,Apartment
+1200045,55.0,Female,,Divorced,1.0,High School,,28.202363365149928,Rural,Premium,1.0,2.0,614.0,1.0,2022-03-01 15:21:39.134960,Good,Yes,Rarely,Condo
+1200046,57.0,Female,28164.0,Divorced,3.0,Bachelor's,Self-Employed,,Urban,Comprehensive,0.0,0.0,809.0,5.0,2020-10-16 15:21:39.117183,Poor,No,Daily,Condo
+1200047,20.0,Male,567.0,Married,0.0,High School,,,Rural,Comprehensive,1.0,14.0,697.0,2.0,2023-04-12 15:21:39.237118,Good,Yes,Weekly,House
+1200048,48.0,Female,59974.0,Single,1.0,Master's,Self-Employed,15.495501991260056,Suburban,Basic,0.0,5.0,653.0,1.0,2019-08-25 15:21:39.132191,Average,No,Daily,Condo
+1200049,35.0,Male,123133.0,Divorced,,High School,,23.319790456393097,Rural,Premium,3.0,17.0,584.0,3.0,2023-06-22 15:21:39.237118,Poor,No,Weekly,Condo
+1200050,25.0,Male,16061.0,Single,4.0,Master's,Self-Employed,27.716504067589025,Rural,Comprehensive,1.0,7.0,626.0,4.0,2020-06-24 15:21:39.274993,Average,No,Rarely,Condo
+1200051,20.0,Male,26253.0,Single,2.0,PhD,Self-Employed,19.556956057672533,Suburban,Basic,,4.0,826.0,7.0,2024-02-05 15:21:39.236064,Good,No,Rarely,Apartment
+1200052,42.0,Male,7077.0,Divorced,3.0,High School,Employed,33.43361069755513,Urban,Comprehensive,0.0,19.0,813.0,9.0,2022-06-27 15:21:39.209847,Average,Yes,Rarely,Apartment
+1200053,51.0,Female,18674.0,Married,2.0,Bachelor's,Employed,34.013556484442,Urban,Comprehensive,,7.0,662.0,5.0,2023-10-04 15:21:39.229482,Good,No,Daily,Apartment
+1200054,55.0,Female,11596.0,Divorced,0.0,PhD,Employed,38.59362249484518,Suburban,Basic,1.0,10.0,537.0,1.0,2020-12-15 15:21:39.278402,Poor,No,Monthly,Condo
+1200055,26.0,Female,5877.0,Single,3.0,PhD,Employed,40.04106082015421,Suburban,Comprehensive,2.0,5.0,438.0,6.0,2021-10-28 15:21:39.107553,Good,No,Rarely,Apartment
+1200056,40.0,Female,,Divorced,2.0,Master's,Employed,19.735439972004244,Suburban,Basic,1.0,4.0,544.0,6.0,2023-08-17 15:21:39.155231,Good,Yes,Weekly,Condo
+1200057,37.0,Male,5825.0,Married,3.0,PhD,,36.9678869677538,Rural,Basic,2.0,19.0,782.0,7.0,2022-05-15 15:21:39.206847,Poor,Yes,Daily,Apartment
+1200058,44.0,Female,25235.0,Single,2.0,Master's,Employed,48.10750658231366,Rural,Premium,3.0,6.0,683.0,3.0,2023-11-13 15:21:39.155231,Average,No,Daily,House
+1200059,36.0,Male,27478.0,Married,1.0,Master's,Self-Employed,30.52296679636804,Urban,Comprehensive,1.0,12.0,590.0,3.0,2020-01-09 15:21:39.126661,Good,No,Daily,Apartment
+1200060,55.0,Female,37253.0,Divorced,1.0,Bachelor's,,29.983517561764614,Suburban,Premium,3.0,7.0,677.0,2.0,2024-03-03 15:21:39.232526,Good,Yes,Daily,House
+1200061,28.0,Female,17553.0,Divorced,3.0,High School,,13.14353588619024,Urban,Premium,2.0,18.0,584.0,1.0,2020-03-04 15:21:39.145732,Good,No,Rarely,House
+1200062,42.0,Male,77364.0,,3.0,High School,Unemployed,12.143979032008248,Rural,Comprehensive,3.0,16.0,489.0,2.0,2023-01-17 15:21:39.244069,Average,Yes,Rarely,Condo
+1200063,18.0,Female,54799.0,Single,2.0,Bachelor's,Employed,15.06770843965507,Rural,Premium,,18.0,617.0,4.0,2022-03-28 15:21:39.131192,Poor,Yes,Daily,House
+1200064,37.0,Female,,Divorced,0.0,PhD,,34.043376043663834,Rural,Comprehensive,0.0,6.0,759.0,3.0,2020-01-29 15:21:39.134960,Good,No,Monthly,House
+1200065,56.0,Male,35615.0,,2.0,Bachelor's,Unemployed,30.91367764703429,Suburban,Premium,,7.0,734.0,1.0,2023-04-15 15:21:39.147735,Poor,Yes,Rarely,House
+1200066,28.0,Male,32966.0,Married,0.0,PhD,,15.392427030344477,Urban,Premium,,17.0,612.0,3.0,2024-04-02 15:21:39.248098,Average,Yes,Daily,Condo
+1200067,49.0,Female,33307.0,Divorced,2.0,Master's,Self-Employed,42.78082826969963,Rural,Basic,0.0,9.0,781.0,2.0,2020-07-21 15:21:39.100695,Good,No,Rarely,Condo
+1200068,,Male,9473.0,Divorced,4.0,Master's,,22.664154924680503,Urban,Premium,,9.0,455.0,8.0,2021-08-24 15:21:39.134960,Poor,No,Weekly,House
+1200069,45.0,Male,37188.0,Married,,PhD,Employed,35.00115243805723,Urban,Comprehensive,1.0,16.0,727.0,1.0,2022-06-03 15:21:39.274993,Good,Yes,Rarely,Apartment
+1200070,43.0,Male,382.0,Divorced,3.0,PhD,Self-Employed,5.62472678662586,Rural,Premium,0.0,13.0,787.0,1.0,2022-03-04 15:21:39.264504,Good,No,Weekly,Condo
+1200071,58.0,Male,,Married,3.0,Bachelor's,Self-Employed,36.29692864040507,Rural,Premium,1.0,10.0,,5.0,2024-02-10 15:21:39.126661,,No,Daily,Condo
+1200072,56.0,Female,18127.0,Single,4.0,High School,Self-Employed,32.695933048379345,Rural,Comprehensive,1.0,19.0,711.0,5.0,2020-05-22 15:21:39.232526,Good,No,Rarely,House
+1200073,64.0,Female,51723.0,Single,3.0,Bachelor's,,45.17309640952868,Rural,Basic,3.0,6.0,585.0,4.0,2021-02-16 15:21:39.264504,Average,No,Monthly,Apartment
+1200074,46.0,Male,1788.0,Divorced,2.0,Master's,Employed,22.388435454881343,Rural,Comprehensive,2.0,5.0,593.0,5.0,2024-06-01 15:21:39.093681,Good,No,Weekly,Apartment
+1200075,49.0,Male,43905.0,Divorced,3.0,High School,,11.942149921864464,Urban,Basic,,9.0,,2.0,2022-03-21 15:21:39.121169,Good,Yes,Daily,Condo
+1200076,39.0,Male,126623.0,,4.0,High School,Self-Employed,30.27338428366316,Suburban,Comprehensive,2.0,0.0,749.0,5.0,2023-11-01 15:21:39.188220,Good,No,Daily,House
+1200077,20.0,Male,8426.0,Married,,PhD,Employed,37.14202935407987,Rural,Comprehensive,0.0,16.0,543.0,8.0,2023-06-28 15:21:39.282785,Good,Yes,Weekly,Apartment
+1200078,43.0,Female,17087.0,Divorced,0.0,PhD,Employed,36.8167640531551,Urban,Basic,0.0,7.0,,6.0,2021-07-26 15:21:39.098696,Good,Yes,Monthly,Apartment
+1200079,37.0,Female,2702.0,Married,0.0,Bachelor's,Unemployed,13.818846522209729,Urban,Basic,,2.0,607.0,3.0,2020-03-14 15:21:39.236064,Average,No,Weekly,House
+1200080,33.0,Male,39649.0,Married,3.0,PhD,Employed,3.441168090805137,Urban,Basic,0.0,0.0,361.0,9.0,2024-06-02 15:21:39.223901,Good,No,Monthly,Condo
+1200081,32.0,Male,2445.0,Married,3.0,Bachelor's,Employed,40.09808670289859,Urban,Premium,3.0,0.0,821.0,7.0,2023-10-04 15:21:39.226954,Average,Yes,Weekly,Condo
+1200082,47.0,Female,7872.0,Divorced,1.0,PhD,Employed,24.9776599518709,Suburban,Basic,0.0,5.0,454.0,1.0,2022-06-11 15:21:39.237118,Poor,No,Rarely,Condo
+1200083,58.0,Male,2447.0,Divorced,,High School,,30.20500253600954,Rural,Comprehensive,3.0,3.0,683.0,7.0,2022-10-10 15:21:39.087123,,Yes,Monthly,Apartment
+1200084,53.0,Female,14863.0,Married,2.0,Master's,Employed,10.8441336316151,Suburban,Comprehensive,1.0,17.0,672.0,6.0,2022-10-11 15:21:39.155231,Poor,No,Weekly,House
+1200085,40.0,Female,20861.0,Single,0.0,PhD,Self-Employed,47.96588124920374,Suburban,Premium,2.0,8.0,500.0,2.0,2020-01-15 15:21:39.129190,,No,Weekly,Condo
+1200086,20.0,Female,51592.0,Divorced,1.0,Bachelor's,Unemployed,22.255680256392,Suburban,Comprehensive,,15.0,373.0,8.0,2021-02-09 15:21:39.272456,Average,Yes,Weekly,Apartment
+1200087,30.0,Male,3635.0,Divorced,0.0,PhD,Unemployed,11.611553959884487,Suburban,Basic,2.0,3.0,338.0,8.0,2021-08-12 15:21:39.134960,Poor,Yes,Rarely,Condo
+1200088,26.0,Male,17091.0,Married,0.0,Bachelor's,,17.848327609117053,Urban,Comprehensive,0.0,19.0,,6.0,2024-02-11 15:21:39.172097,Average,No,Monthly,Condo
+1200089,59.0,Female,,Married,,Master's,,19.17153366256885,Suburban,Basic,3.0,2.0,558.0,2.0,2019-11-18 15:21:39.134960,Good,No,Weekly,Apartment
+1200090,33.0,Female,68028.0,Divorced,0.0,High School,,7.846759754499322,Urban,Premium,2.0,15.0,490.0,6.0,2019-10-17 15:21:39.235012,Average,Yes,Rarely,Apartment
+1200091,28.0,Male,3720.0,Married,2.0,Master's,,20.47495322943848,Rural,Premium,,18.0,796.0,2.0,2021-03-29 15:21:39.125660,Good,Yes,Weekly,Apartment
+1200092,62.0,Male,9087.0,Divorced,1.0,PhD,,,Suburban,Premium,4.0,15.0,656.0,2.0,2022-11-05 15:21:39.237118,Average,Yes,Monthly,Apartment
+1200093,18.0,Male,2737.0,Married,0.0,High School,,50.5137696490873,Rural,Basic,1.0,13.0,802.0,1.0,2024-08-14 15:21:39.091080,Poor,Yes,Rarely,Condo
+1200094,51.0,Male,34201.0,Divorced,0.0,Master's,,18.63300564503661,Urban,Comprehensive,0.0,0.0,622.0,7.0,2023-04-24 15:21:39.228521,Average,No,Daily,House
+1200095,32.0,Female,36707.0,Married,,Bachelor's,Self-Employed,9.894501511238277,Urban,Basic,,0.0,591.0,3.0,2024-03-24 15:21:39.134960,Average,No,Rarely,Condo
+1200096,46.0,Male,28215.0,Single,2.0,PhD,,,Urban,Premium,1.0,19.0,690.0,1.0,2020-12-29 15:21:39.167099,Good,No,Weekly,Condo
+1200097,52.0,Male,5161.0,Single,1.0,Bachelor's,Unemployed,23.91783175536859,Suburban,Basic,0.0,9.0,,8.0,2023-10-01 15:21:39.092127,Good,Yes,Weekly,Condo
+1200098,62.0,Female,5033.0,Divorced,0.0,High School,,13.856339480459608,Rural,Basic,,15.0,817.0,3.0,2024-04-05 15:21:39.283783,Poor,Yes,Daily,House
