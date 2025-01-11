@@ -29,10 +29,10 @@ I'll be documenting my machine learning process below, which will include:
 
 and much more. Similar to the way [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out, except I made this one slightly more readable and easy to navigate than the depression one.
 
-I added some photos in the documentation below for better visualization so that its not so dry, but its still a long report, so feel free to skip ⏭️ to any chapters or versions that interest you 😊.
+I added some photos of the project process in the documentation below for better visualization so that its not so dry, but its still a long report, so feel free to skip ⏭️ to any chapters or versions that interest you 😊.
 
 ## Table of Content 📖
-Chapter 1: Data Cleaning (Versions 1-15)
+Chapter 1: Data Cleaning🧼 (Versions 1-15)
 - V1: [A New Start](#version-1-a-new-start)
 - V2: Identifying NaN columns
 - V3: Tackling NaNs, starting with the 'Age' column
@@ -49,7 +49,7 @@ Chapter 1: Data Cleaning (Versions 1-15)
 - V14: Processing 'Policy Start Date' column
 - V15: Making the Kaggle notebook run smoother
 
-Chapter 2: Machine Learning model(s) configuration
+Chapter 2: Machine Learning model(s) configuration⚙️
 - V16: Training RandomForestRegressor model (a problem occured here)
 - V17: Resorting to Linear Regression
 - V18: Finally found the problem (and resolved it)
@@ -74,7 +74,7 @@ Chapter 3: Conclusion
 
 ## 📚 Documentation
 
-## Chapter 1 - Data Cleaning
+## Chapter 1 - Data Cleaning🧼
 ### Version 1: A New Start
 Brand new Kaggle notebook, haven't edited anything yet, this is just a standard notebook you get when you create a new notebook in Kaggle. It contains 1 single cell which imports the necessary training and test datasets (train.csv and test.csv), as well as some default packages necessary for machine learning such as numpy and pandas.
 
