@@ -27,7 +27,7 @@ I'll be documenting my machine learning process below, which will include:
 - how the models performed and the final results 🏆
 - the frustrations experienced and lessons learnt 😤
 
-and much more. Similar to the way [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out.
+and much more. Similar to the way [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out. Except I made this README slightly more readable and easy to navigate than the depression one.
 
 Once again, feel free to skip to any chapters or versions that interest you. 
 
