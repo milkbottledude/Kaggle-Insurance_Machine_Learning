@@ -33,7 +33,7 @@ Once again, feel free to skip to any chapters or versions that interest you. Its
 
 ## Table of Content
 Chapter 1: Data Cleaning (Versions 1-15)
-- V1: A new start
+- V1: A New Start
 - V2: Identifying NaN columns
 - V3: Tackling NaNs, starting with the 'Age' column
 - V4: Annual Income
@@ -53,14 +53,32 @@ Chapter 2: Machine Learning model(s) configuration
 - V16: Training RandomForestRegressor model (a problem occured here)
 - V17: Resorting to Linear Regression
 - V18: Finally found the problem (and resolved it)
-- V19: Switching it up with TensorFlow Neural Network 
+- V19: Seeing how a normal Decision Tree Regressor fares
+- V20: Trying RandomForestRegressor model again
+- V21: TensorFlow Neural Network model
+- V22: Configuring TF NN model hyperparams
+- V23: Configuring data for NN model
+- V24: First NN model submission (big improvement!)
+- V25: Adjusting hyperparameter - Neuron number
+- V26: Adjusting hyperparameter - Batch size
+- V27: Adjusting batch size pt 2
+- V28: Adjusting hyperparameter - Layer number
+- V29: Scaling data
+- V30: Adjusting hyperparameter - Epoch number
+- V31: Adjusting number of epochs pt 2
+- V32: Experimenting with data - datetime values
+- V33: Experimenting with datetime values pt 2
+
+Chapter 3: Conclusion
+
 
 ## 📚 Documentation
 
-### Chapter 1 - Version 1:
+## Chapter 1 - Data Cleaning
+### Version 1: A New Start
 Brand new Kaggle notebook, haven't edited anything yet, this is just a standard notebook you get when you create a new notebook in Kaggle. It contains 1 single cell which imports the necessary training and test datasets (train.csv and test.csv), as well as some default packages necessary for machine learning such as numpy and pandas.
 
-## Version 2:
+### Version 2: Identifying NaN columns
 I start with removing the id column (which is unique and doesnt provide insightful patterns or learning points) as well as the target column 'Premium Amount', which i put to one side as the y-value for later when training the model. I also added a checknan function, which prints the rows where a certain column has a nan value, as well as a fillnan function which fills nan values with a method of your choice: mean, median, or with the values of another column.
 
 After checking for nans in all the columns, these are the columns which turned up:
@@ -78,14 +96,14 @@ After checking for nans in all the columns, these are the columns which turned u
 
 In the next 11 chapters, we will be tackling each column. 1 column per chapter, esketit.
 
-## Version 3: Age
+### Version 3: Age
 For age, the data has a pretty even distribution (see Fig 1 below), so it wont really matter whether we use mean or median for fillna, both values are rather close anyway. I'll just fillna with mean because thats more familiar to most people compared to median.
 
 Fig 1:
 
 ![image](https://github.com/user-attachments/assets/19feaa09-d838-4f44-8372-7c38a9f88971)
 
-## Version 4: Annual Income
+### Version 4: Annual Income
 Most income distributions are skewed right with a few high income individuals and many low income individuals, and the income data we are working with is no different (see Fig 2 below):
 
 Fig 2:
@@ -94,22 +112,22 @@ Fig 2:
 
 For this ill be using the median to fillna. The mean in income distributions tend to be much higher than the median due to the right skewing (32745.2 and 23911.0 respectively, hence i feel median is a better representation of the "average person's" income.
 
-## Version 5: Marital Status
+### Version 5: Marital Status
 In the 'Marital Status' column, there are 18529 NaN values, which sounds like alot but only makes up 0.015 (1.5%) of the total training dataset. To fix this, i will just replace all with 'unknown' to play it safe as im not confident the nan values follow the mode. I might change this to mode later on for experimenting and see if it increases the accuracy score of the model. Sticking with the safe option for now.
 
 ## Version 6: Number of Dependents
 Gonna fillnan with the mean for this, it doesnt matter much anyway as both the mean and median are 2.0 when rounded off to 1dp.
 
-## Version 7: Occupation
+### Version 7: Occupation
 This column shows whether one is employed, unemployed, or self-employed. Employment is a big factor in the cost of insurance for many reasons. For example, your route to work may be a dangerous one so car and life insurance may be more expensive, or your insurance comes from your company meaning cheaper costs as you are buying as part of a bulk purchase of insurance with other employees. Overall, employment tends to result in cheaper insurance premiums, especially since its a sign of responsibility in risk assessment in the eyes of insurance companies. I will fillnan with the mode as of now, but i may completely remove this column in a future column as a large proportion of data is missing (30%), even though its an important factor.
 
-## Version 8: Health Score
+### Version 8: Health Score
 With a reasonably normal distribution, this would do well with a mean fillnan. median works too, both values are very close to each other.
 
-## Version 9: Previous Claims
+### Version 9: Previous Claims
 Using mode for this as there arent a wide range of values, which is 0. My reasoning is that its quite rare for people to have filed an insurance claim before. Me personally, i dont know anyone who has used their insurance before, but that could be because i have little friends
 
-## Version 10: Vehicle Age
+### Version 10: Vehicle Age
 Distribution for this column is fairly even (see Fig 3 below), mean and median values dont defer by much, but ill just use median cuz i dont have to round off to a whole number
 
 Fig 3:
@@ -117,31 +135,31 @@ Fig 3:
 ![image](https://github.com/user-attachments/assets/e24d0623-3f61-466c-8c04-abd3d347b9b9)
 
 
-## Version 11: Credit Score
+### Version 11: Credit Score
 A distribution with no ridiculous outliers (see Fig 4 below), both mean and median values are extremely similar, will fillna with median.
 
 Fig 4:
 
 ![image](https://github.com/user-attachments/assets/6f45d916-284e-47ad-b62f-2fd922b7e52d)
 
-## Version 12: Insurance Duration
+### Version 12: Insurance Duration
 Fig 5:
 
 ![image](https://github.com/user-attachments/assets/d5436670-8d87-4299-9571-ef2f506b7c5f)
 
 Median. Nuff said.
 
-## Version 13: Customer Feedback
+### Version 13: Customer Feedback
 Not a wide range of values for this column (poor, average, good). Just gonna use mode for fillna, which is the value 'average'
 
-## Version 14: Processing 'Policy Start Date' column
+### Version 14: Processing 'Policy Start Date' column
 As the first model i plan to use, randomforestregressor, cant handle datetime values, i have to process the data and change its format for something more 'digestible' for the model. My plan is to simply split the values into 2 separate columns, 'start year' and 'start month'. For the start year, i will leave it as it is as the randomforest models are good at managing such unscaled features without much trouble, and there is a general trend of insurance premiums increasing as the years pass (Fig 6 below shows gross insurance premiums against time). Contrary to this, there is no valid or apparent linear trend between month value and insurance price, so i will be converting the month values into qualitative values (1 to Jan, 2 to Feb, etc). For the rest of the elements in the datetime value (day and time), ill discard them as their small significance compared to year and month make them unlikely clues to find patterns and trends.
 
 Fig 6: (credits to statista: https://www.statista.com/outlook/fmo/insurances/worldwide)
 
 ![image](https://github.com/user-attachments/assets/e15a2650-f449-41ea-82c3-b6f95622a60c)
 
-## Version 15: Making the Kaggle notebook run smoother 
+### Version 15: Making the Kaggle notebook run smoother 
 As expected of a training dataset with 1.2 million rows, it exceeded the ram limit of the kaggle notebook and crashed it (Fig 7). i want to train the model within the limits of the ram, but i also dont want to waste data by not using it. I also tidied up the fillnan code that was written in the earlier versions so that its slightly less of an eyesore.
 
 Fig 7:
@@ -159,15 +177,14 @@ smokingmap = {'Yes': 1, 'No': 0}
 
 This way, unnecessary columns wont be created. Originally 2 separate columns for gender, 3 for feedback and 2 for smoking status, now just 1 for each variable. Doing that for 1.2m rows should do the trick. Also converting the feedback string values to numerical values shouldnt pose an issue for the model even though its 'though process' moulds to this thinking that good > average > poor (3 > 2 > 1).
 
-# Chapter 2: Machine Learning model(s) configuration
-
-## Version 16: Training RandomForestRegressor model
+## Chapter 2: Machine Learning model(s) configuration
+### Version 16: Training RandomForestRegressor model
 Set up the RandomForestRegressor model as well as a simple function that returns the RMSLE when u pass the predicted and actual y values from the mocktest data. Got a RMSLE value of 1.16(2dp) from a stock rfr model with no custom hyperparams except random_state. The top score on the leaderboard is currently 1.03(2dp), so we have work to do. For now ill submit it and see the public RMSLE score.
 
-# Version 17: Using Linear Regression
+### Version 17: Using Linear Regression
 Submission couldnt go thru as the test data with 800k rows couldnt be predicted, my laptop sounds like a boeing rn. Prob cuz the model had to fit 720k training data from the train_test_split and predict 480k mock test data, before predicting 800k rows from the real test dataset. Nothing like the depression dataset which consisted of only 141k total training rows and 93.8k test rows. Switching to a more simpler LinearRegressor model, but will defo use a more in-depth machine learning model in the future, i have a few in mind. LinearRegressor is a simple model but did better than i thought, getting a RMSLE score of 1.17 (2dp). But when i try to predict with the test dataset, i keep running out of damn ram. I hope to find the problem soon, but rn im stumped.
 
-# Version 18: Finally found the problem
+### Version 18: Finally found the problem
 The mistake i made is that I split up the 'Policy Start Date' into year and month columns for the train_data but did not for the test_data, resulting in the test_data getting dummies for 158776 unique datetime values, basically creating over 15k more columns and hence using up crazy ram. I found out when i printed out all unique values in each column for both datasets, and noticed the large number in a row where a large number should not be present (see Fig 8 below). A careless mistake on my part, i apologise. But now we can now finally find out where we stand on the public leaderboard.
 
 Fig 8:
@@ -176,12 +193,12 @@ Fig 8:
 
 Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643 (10th percentile)
 
-## Version 19 & 19.1:
+### Version 19 & 19.1: Decision Tree regressor
 Trying out a DecisionTreeRegressor model. On the mock test data, it didnt do as well and got an RMSLE score of 1.52. But if theres one thing i learned from the previous competition (predicting depression), its that the mock test data score could sometimes be very different from the actual score, although granted this kind of occurence is rare. Only one way to find out.
 
 Edit: public RMSLE score - 1.51244 
 
-## Version 20 & 20.1 & 20.1.1: RandomForestRegressor
+### Version 20 & 20.1 & 20.1.1: RandomForestRegressor
 I'm feeling patient today so im trying this model again, but its going to take a very long time.
 
 Edit: Took a long time (Fig 9), but it was worth it. Got our best public RMSLE score so far, 1.1535. An improvement compared to previous best (1.16532) with the basic linear regression model.
@@ -192,10 +209,10 @@ Fig 9:
 
 New leaderboard position - 562/678 (17th percentile, small improvement)
 
-## Version 21: Switching it up with TensorFlow Neural Network 
+### Version 21: Switching it up with TensorFlow Neural Network 
 To start, i instantiated a Keras sequential model, fairly basic with just 3 layers including the input and output layer. Set the neurons in a decreasing manner starting from 128, but this is just the baseline and not the final neuron values. I may also change the layers depending on how the model is fitting. 
 
-## Version 22: Configuring the model further
+### Version 22: Configuring the model further
 Here are the hyperparameters ill be using for model.compile():
 
 optimizer: 'adam', im not super familiar with this optimizer if im being honest, but its the default optimizer and works for both classification and regression problems.
@@ -357,6 +374,10 @@ And thats the end of the competition, here is my final standing with the rest of
 
 Final public RMSLE score - 1.06612, Final leaderboard position - 1074/2392 (55th percentile)
 
-Some parting words, this was fun. Big learning point from this project was definitely neural networks, and learning it was certainly an ordeal. Not just tuning and feature engineering, but just prepping the data to be put into the model and learning HOW to put the data into the model, creating layers etc was also difficult to pick up. But totally worth it when i saw the RMSLE score improve by so much and the leaderboard position shoot up. Neural networks definitely have a big advantage over traditional regression or tree classifier models in many ways, particularly handling non linearity in the data. So im very glad to have been given the opportunity to learn and practice this type of machine learning model on a dataset as large and interesting as this insurance one. Im looking forward to the next project where i can test out my new neural network skills as well as improve my tuning of the model. 
+## Chapter 3 - Conclusion
 
-If you have read this far, thank you so much, i hope this was as informative and enjoyable to you as it was for me. Have a good day, dont forget to drink water ok. aight byee :)
+Once again, this was fun. Big learning point from this project was definitely neural networks, and learning it was certainly an ordeal. Not just tuning and feature engineering, but just prepping the data to be put into the model and learning HOW to put the data into the model, creating layers etc was also difficult to pick up. But totally worth it when i saw the RMSLE score improve by so much and the leaderboard position shoot up. Neural networks definitely have a big advantage over traditional regression or tree classifier models in many ways, particularly handling non linearity in the data. So im very glad to have been given the opportunity to learn and practice this type of machine learning model on a dataset as large and interesting as this insurance one. Im looking forward to the next project where i can test out my new neural network skills as well as improve my tuning of the model. 
+
+If you have read this far, thank you so much, i hope this was as informative and enjoyable to you as it was for me. Have a good day, dont forget to drink water. 
+
+ok byee :) 👋
