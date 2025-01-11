@@ -4,6 +4,8 @@
 - 🗪 Feel free to telegram me [@milkbottledude](https://t.me/milkbottledude) if you have any questions, or just want to chat :)
 
 ## Overview 🔍
+Here is the link to the official [Kaggle insurance competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview), although you need to join the competition with a valid account to view the full datasets.
+
 
 This project aims to predict insurance premiums based on various factors, such as but not limited to:
 - Age 🎂
@@ -11,7 +13,7 @@ This project aims to predict insurance premiums based on various factors, such a
 - Marital Status 💍
 - Income 💵
   
-The full list of factors can be found in the [sample.csv](./sample.csv) file, the first 100 rows of the test dataset used for the competition. Here is the link to the official [Kaggle insurance competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview), although you need to join the competition with a valid account to view the rest of the datasets.
+The full list of factors can be found in the [sample.csv](./sample.csv) file, the first 100 rows of the test dataset used for the competition.
 
 Here i experiment with 3 different machine learning models:
 - Random Forest Regression model 🌳
