@@ -27,13 +27,13 @@ I'll be documenting my machine learning process below, which will include:
 - how the models performed and the final results 🏆
 - the frustrations experienced and lessons learnt 😤
 
-and much more. Similar to the way [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out. Except I made this README slightly more readable and easy to navigate than the depression one.
+and much more. Similar to the way [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out, except I made this one slightly more readable and easy to navigate than the depression one.
 
 Once again, feel free to skip to any chapters or versions that interest you. 
 
 I added some photos in the documentation below for better visualization so that its not so dry, but its still a long report. So if you want to skim and gloss over certain portions, thats perfectly understandable 😊.
 
-## Table of Content
+## Table of Content 📖
 Chapter 1: Data Cleaning (Versions 1-15)
 - V1: A New Start
 - V2: Identifying NaN columns
