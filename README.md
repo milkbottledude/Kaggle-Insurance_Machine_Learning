@@ -1,6 +1,11 @@
-<img src="https://www.moneysense.gov.sg/images/2018%20MoneySense%20website%20images/insurance_policy6cff.jpg" alt="banner" width="100%" />
+
+![image](https://github.com/user-attachments/assets/9dd1c04e-9415-4bf1-8fca-9db983a1d3b0)
+
+🗪 Feel free to telegram me [@milkbottledude](https://t.me/milkbottledude) if you have any questions or just want to chat :)
 
 # Kaggle-Insurance_Machine_Learning
+
+## Overview
 This machine learning project aims to predict insurance premiums based on various factors. I'll be documenting my machine learning process in this repository, similar to the Kaggle-Depressed_Machine_Learning repository. That competition took up a lot of time and i got rewarded with only dark eye bags, and im here to do it all over again. Perhaps i should try other hobbies like fishing instead.
 
 Once again, feel free to skip to any chapters or versions that interest you, its a long report and its perfectly understandable if you want to just skim certain portions.
