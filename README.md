@@ -27,11 +27,9 @@ I'll be documenting my machine learning process below, which will include:
 - how the models performed and the final results 🏆
 - the frustrations experienced and lessons learnt 😤
 
-and much more. Similar to the way the [Kaggle-Depressed_Machine_Learning competition repository](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out. It took up a lot of time, I was rewarded with dark eye bags, and im here to do it all over again. Maybe ill try other hobbies like fishing instead. 
+and much more. Similar to the way the [Kaggle-Depressed_Machine_Learning competition repository](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out.
 
-Just kidding, the process was thoroughly enjoyable 😊 thats why im doing it again.
-
-Once again, feel free to skip to any chapters or versions that interest you. Its a long report, and its perfectly understandable if you want to skim certain portions.
+Once again, feel free to skip to any chapters or versions that interest you. Its a long report, and its perfectly understandable if you want to skim and gloss over certain portions 😊.
 
 ## Table of Content
 Chapter 1: Data Cleaning (Versions 1-15)
