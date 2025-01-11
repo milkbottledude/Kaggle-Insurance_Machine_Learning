@@ -16,20 +16,22 @@ This project aims to predict insurance premiums based on various factors, such a
 The full list of factors can be found in the [sample.csv](./sample.csv) file, the first 100 rows of the test dataset used for the competition.
 
 Here i experiment with 3 different machine learning models:
-- Random Forest Regression model 🌳
+- [Random Forest Regression](https://www.geeksforgeeks.org/random-forest-regression-in-python/) model 🌳
   - takes the average prediction from multiple decision trees, good for non-linear relationships 
-- Linear Regression model 📈
+- [Linear Regression](https://www.geeksforgeeks.org/ml-linear-regression/) model 📈
   - plain and simple model that assumes a linear relationship between x variables and y
-- Tensorflow Neural Network model 🧠
+- Tensorflow [Neural Network](https://www.geeksforgeeks.org/neural-networks-a-beginners-guide/) model 🧠
   - similar to RFR models in that it handles non linearity well, different as it better handles large datasets but is harder to interpret and set up 
 
 I'll be documenting my machine learning process below, which will include:
 - how i set up the machine learning models 🔧
-- prepping existing and creating new data for the models 📊
+- prepping existing data and creating new data for the models 📊
 - how the models performed and the final results 🏆
 - the frustrations experienced and lessons learnt 😤
 
-and much more. Similar to the way [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out, except I made this one slightly more readable and easy to navigate than the depression one.
+and much more. 
+
+Kind of like [Kaggle-Depressed_Machine_Learning](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning), another competition repository of mine you can check out, except I made this one slightly more readable and easy to navigate than the depression one.
 
 I added some photos of the project process in the documentation below for better visualization so that its not so dry, but its still a long report, so feel free to skip ⏭️ to any chapters or versions that interest you 😊.
 
