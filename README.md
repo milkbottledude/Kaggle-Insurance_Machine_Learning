@@ -1,16 +1,39 @@
 
 ![image](https://github.com/user-attachments/assets/9dd1c04e-9415-4bf1-8fca-9db983a1d3b0)
 
-🗪 Feel free to telegram me [@milkbottledude](https://t.me/milkbottledude) if you have any questions or just want to chat :)
+- 🗪 Feel free to telegram me [@milkbottledude](https://t.me/milkbottledude) if you have any questions, or just want to chat :)
 
-# Kaggle-Insurance_Machine_Learning
+## Overview 🔍
 
-## Overview
-This machine learning project aims to predict insurance premiums based on various factors. I'll be documenting my machine learning process in this repository, similar to the Kaggle-Depressed_Machine_Learning repository. That competition took up a lot of time and i got rewarded with only dark eye bags, and im here to do it all over again. Perhaps i should try other hobbies like fishing instead.
+This project aims to predict insurance premiums based on various factors, such as but not limited to:
+- Age 🎂
+- Occupation 💼
+- Marital Status 💍
+- Income 💵
+  
+The full list of factors can be found in the [test.csv](./test.csv) file, the test dataset used for the competition. Here is the link to the [official Kaggle insurance competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview), although you need to join the competition with a valid account to view the rest of the datasets.
 
-Once again, feel free to skip to any chapters or versions that interest you, its a long report and its perfectly understandable if you want to just skim certain portions.
+Here i experiment with 3 different machine learning models:
+- Random Forest Regression model 🌳
+  - takes the average prediction from multiple decision trees, good for non-linear relationships 
+- Linear Regression model 📈
+  - plain and simple model that assumes a linear relationship between x variables and y
+- Tensorflow Neural Network model 🧠
+  - similar to RFR models in that it handles non linearity well, different as it better handles large datasets but is harder to interpret and set up 
 
-## Contents
+I'll be documenting my machine learning process below, which will include:
+- how i set up the machine learning models 🔧
+- prepping existing and creating new data for the models 📊
+- how the models performed and the final results 🏆
+- the frustrations experienced and lessons learnt 😤
+
+and much more. Similar to the way the [Kaggle-Depressed_Machine_Learning competition repository](https://github.com/milkbottledude/Kaggle-Depressed_Machine_Learning) is formatted, another competition repository of mine you can check out. It took up a lot of time, I was rewarded with dark eye bags, and im here to do it all over again. Maybe ill try other hobbies like fishing instead. 
+
+Just kidding, the process was thoroughly enjoyable 😊 thats why im doing it again.
+
+Once again, feel free to skip to any chapters or versions that interest you. Its a long report, and its perfectly understandable if you want to skim certain portions.
+
+## Table of Content
 Chapter 1: Data Cleaning (Versions 1-15)
 - V1: A new start
 - V2: Identifying NaN columns
@@ -34,9 +57,9 @@ Chapter 2: Machine Learning model(s) configuration
 - V18: Finally found the problem (and resolved it)
 - V19: Switching it up with TensorFlow Neural Network 
 
-# Chapter 1: Data Cleaning
+## 📚 Documentation
 
-## Version 1:
+### Chapter 1 - Version 1:
 Brand new Kaggle notebook, haven't edited anything yet, this is just a standard notebook you get when you create a new notebook in Kaggle. It contains 1 single cell which imports the necessary training and test datasets (train.csv and test.csv), as well as some default packages necessary for machine learning such as numpy and pandas.
 
 ## Version 2:
