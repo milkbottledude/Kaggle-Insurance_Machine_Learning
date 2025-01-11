@@ -1,5 +1,5 @@
 # Kaggle-Insurance_Machine_Learning
-This machine learning project aims to predict insurance premiums based on various factors. I'll be documenting my machine learning process in this repository, similar to the Kaggle-Depressed_Machine_Learning repository. The latter competition took up a lot of time and i got rewarded with only dark eye bags, and im here to do it all over again. Perhaps i should try other hobbies like fishing instead.
+This machine learning project aims to predict insurance premiums based on various factors. I'll be documenting my machine learning process in this repository, similar to the Kaggle-Depressed_Machine_Learning repository. That competition took up a lot of time and i got rewarded with only dark eye bags, and im here to do it all over again. Perhaps i should try other hobbies like fishing instead.
 
 Once again, feel free to skip to any chapters or versions that interest you, its a long report and its perfectly understandable if you want to just skim certain portions.
 
