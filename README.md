@@ -115,7 +115,7 @@ For this ill be using the median to fillna. The mean in income distributions ten
 ### Version 5: Marital Status
 In the 'Marital Status' column, there are 18529 NaN values, which sounds like alot but only makes up 0.015 (1.5%) of the total training dataset. To fix this, i will just replace all with 'unknown' to play it safe as im not confident the nan values follow the mode. I might change this to mode later on for experimenting and see if it increases the accuracy score of the model. Sticking with the safe option for now.
 
-## Version 6: Number of Dependents
+### Version 6: Number of Dependents
 Gonna fillnan with the mean for this, it doesnt matter much anyway as both the mean and median are 2.0 when rounded off to 1dp.
 
 ### Version 7: Occupation
