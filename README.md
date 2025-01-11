@@ -33,7 +33,7 @@ I added some photos in the documentation below for better visualization so that 
 
 ## Table of Content 📖
 Chapter 1: Data Cleaning (Versions 1-15)
-- V1: A New Start
+- V1: [A New Start](#version-1-a-new-start)
 - V2: Identifying NaN columns
 - V3: Tackling NaNs, starting with the 'Age' column
 - V4: Annual Income
