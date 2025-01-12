@@ -58,7 +58,7 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V17: [Using Linear Regression](#version-17-using-linear-regression)
 - V18: [Finally found the problem (and resolved it)](#version-18-finally-found-the-problem)
 - V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-and-191-decision-tree-regressor)
-- V20: [Trying RandomForestRegressor model again](#version-20-20.1-and-20.1.1-randomforestregressor)
+- V20: [Trying RandomForestRegressor model again](#version-20-201-and-202-randomforestregressor)
 - V21: [TensorFlow Neural Network model](#version-21-switching-it-up-with-tensorflow-neural-network)
 - V22: [Configuring TF NN model hyperparams](#version-22-configuring-the-model-further)
 - V23: [Configuring data for NN model](#version-23-feeding-data-into-nn-model)
@@ -69,8 +69,8 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V28: [Adjusting hyperparameter - Layer number](#version-28-adjusting-number-of-layers)
 - V29: [Scaling data](#version-29-scaling-data)
 - V30: [Adjusting hyperparameter - Epoch number](#version-30-adjusting-number-of-epochs)
-- V31: [Adjusting number of epochs pt 2](#version-31-adjusting-number-of-epochs-again)
-- V32: [Experimenting with data - datetime values](#version-32-fiddling-with-datetime-values-pt-1)
+- V31: [Adjusting number of epochs pt 2](#version-31-and-311-adjusting-number-of-epochs-again)
+- V32: [Experimenting with data - datetime values](#version-32-321-and-322-fiddling-with-datetime-values-pt-1)
 - V33: [Experimenting with datetime values pt 2](#version-33-fiddling-with-datetime-values-pt-2)
 
 Chapter 3: [Conclusion](#chapter-3---conclusion)
@@ -202,7 +202,7 @@ Trying out a DecisionTreeRegressor model. On the mock test data, it didnt do as 
 
 Edit: public RMSLE score - 1.51244 
 
-### Version 20, 20.1 and 20.1.1: RandomForestRegressor
+### Version 20, 20.1 and 20.2: RandomForestRegressor
 I'm feeling patient today so im trying this model again, but its going to take a very long time.
 
 Edit: Took a long time (Fig 9), but it was worth it. Got our best public RMSLE score so far, 1.1535. An improvement compared to previous best (1.16532) with the basic linear regression model.
@@ -225,10 +225,10 @@ loss: 'mean_squared_logarithmic_error'. The Kaggle competition evaluates submiss
 
 metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to have multiple metrics, i chose mae as my primary metric as its a simple way to see the average difference between predicted and actual values. Supplementing the mae is the rmse as it informs us of the presence of large errors, which mae by itself doesnt tell us.
 
-## Version 23: Feeding data into NN model
+### Version 23: Feeding data into NN model
 Before passing the datasets, i gotta convert them from pandas dataframes to numpy arrays. After that, we can train the model using the fit method. For the hyperparameters, starting with 10 for number of epochs. For batch_size, i decided to go with 100. I feel its a value thats not too big that the model overfits, but also not too small that it takes forever all the rows to be trained on. These values are just starter values and ill be adjusting them in the future if needed, depending on whether overfitting or underfitting occurs or if the time taken for training is too long.
 
-## Version 24: Training the model + first submission
+### Version 24: Training the model + first submission
 As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs (Fig 10):
 
 Fig 10:
@@ -241,7 +241,7 @@ Before submitting, lets give the model one final test on our mocktest data. RMSL
 
 Edit: public RMSLE score - 1.07498, new leaderboard position - 427/929 (54th percentile, big jump)
 
-## Version 25: Adjusting neuron(unit) number.
+### Version 25: Adjusting neuron(unit) number.
 A very pleasant surpise to have such a huge improvement in score after using a relatively simple and default neural network model. But as mentioned in the previous version, there are still problems that need to be ironed out. One of which might be overfitting, which is indicated by the rapid reduction of training loss which contrasts to the miniscule dip in validation loss in the earlier epochs. This could be due to 3 reasons: 1) Too many neurons in the layers, aka model is too wide, 2) too many layers, aka model is too deep, or 3) batch_size value is too large during training. These three factors lead to the model learning incorrect patterns that have nothing to do with insurance premiums instead of fitting to general trends.
 
 Firstly ill reduce the number of neurons in the first dense layer from 128 to 64, and from 64 to 32 in the 2nd layer. Now lets look at the new loss values over the different epochs (Fig 11).
@@ -254,7 +254,7 @@ Not much difference in training loss, and basically identical validation loss an
 
 Edit: public RMSLE score - 1.07607
 
-# Version 26: Adjusting training batch_size
+### Version 26: Adjusting training batch_size
 Lets see if reducing the batch size from 100 to 50 will help (Fig 12).
 
 Fig 12:
@@ -265,7 +265,7 @@ Performance worsened slightly surprisingly for the val loss (lowest value was 1.
 
 Edit: public RMSLE score - 1.07710
 
-## Version 27: Adjusting training batch_size (again)
+### Version 27: Adjusting training batch_size (again)
 It could be that the big difference in training loss between the 1st and 2nd epoch was because it was the first time seeing the training data for the 1st epoch hence it had such a huge loss compared to 2nd epoch, and not because of overfitting like i had suspected in Version 24 and 25. In which case reducing batch size in Version 26 might have been a mistake as it introduced unnecessary noise that can mess with weight updates. As of right now im not sure if my model is overfitting or underfitting, so ill be experimenting abit. In this version ill try a higher batch_size, starting with 125. Heres the results of that (Fig 13).
 
 Fig 13:
@@ -283,7 +283,7 @@ Training and validation loss decreased when batch_size was increased from 100 to
 Edit: public RMSLE score - 1.07663
 
 
-## Version 28: Adjusting number of layers
+### Version 28: Adjusting number of layers
 In this version i add an extra layer just before the output layer in the keras model and slapped it with 32 neurons and the same activation function as the other hidden layers (relu). If val loss increases, that means the model is overfitting and no extra layer is needed. However, the results (Fig 15) are very similar to not having an extra layer (see Fig 10), in fact its slightly better with its last epoch having a val loss of 1.65 compared to 1.66 in Fig 10. This is a good sign that the extra layer is not causing the model to overfit. Also its loss when tested with the mocktest data is also the same at 1.16 (2dp).
 
 Fig 15:
@@ -293,7 +293,7 @@ Fig 15:
 Edit: public RMSLE score - 1.07813
 
 
-## Version 29: Scaling data
+### Version 29: Scaling data
 For the previous models like forest classifiers (which do not require scaling) and linear regression (which benefit very slightly or not at all from scaling), scaling is not really necessary. But neural networks are trained in such a way that make them sensitive to the scale of the variables, so in this version im just going to apply some minmax scaling to all the input data. Reverting back to just 4 layers since adding another didnt improve public score. After scaling and training, the results are super identical to Fig 10, the val loss for the last few epochs differing by only around 0.0001. However, when fitted with the entire training dataset (all 1.2m rows), the difference starts to show. Below (Fig 16) shows the results when the input is not scaled (from Version 24), and Fig 17 shows when the input is scaled.
 
 Fig 16 (unscaled):
@@ -310,7 +310,7 @@ Edit: public RMSLE score - 1.0730, new leaderboard position - 480/1055 (55th per
 
 only a single percentile increase but LESGOOOOO finally an improvement. Funny how after all that tuning, the thing that got the score to improve was some damn scaling.
 
-## Version 30: Adjusting number of epochs
+### Version 30: Adjusting number of epochs
 Now that we have tinkered with the layers and neurons, its time to shift our focus to epoch number, which is basically the number of times the model 'goes through' the training data fed to it. Kind of like when you go through a textbook before going into a test. However, unlike when you are revising your textbook, looking through the data too many times can be bad for the model, so now we are going to try and find the optimal epoch for our dataset. Since we started using the nn tensorflow model (Version 21), the epoch number has been set at a nice 10. And from the 9th to the 10th epoch, the losses are still decreasing, so theres a possibility that theres a greater epoch number with an even lower loss. To find this magic epoch number, we need to look at a wide range of epochs beyond 10. 
 
 To visualise how the RMSLE varies with epoch number, we are going to set the epoch number at a high number that should have a high probability of including the optimal epoch number, say 40. Then we are going to access all the loss values using the code "history.history['val_loss']" and plot them against epoch number on a simple line graph.
@@ -339,7 +339,7 @@ Edit: public RMSLE score - 1.06686, new leaderboard position - 496/1127 (56th pe
 
 Another 1 percentile increase, but we take wins no matter how small. First time breaking through RMSLE of 1.07 as well, im happy.
 
-## Version 31 and 31.1: Adjusting number of epochs (again)
+### Version 31 and 31.1: Adjusting number of epochs (again)
 Increasing epoch number to 200 to really make sure beyond doubt that the optimal epoch number was covered. You might think this is excessive, but previously when getting ready to submit the 100 epoch version and fitting the entire training dataset (cuz i only fitted about 70% of the training set earlier leaving 30% for validation), i noticed even at 100 epochs that the loss(when fitting the entire training set not the train_test_split) was still reducing. Granted it was the train_loss but the rate it was reducing was still relatively large, which leads me to think that the val loss might be even lower with an epoch number greater than 100. 
 
 To really see how well the entire training data is fitting at the end, ive set the validation_split at 0.05. I set it really small to use as much training data as possible for fitting the final model WHILE still having an indication of where the model starts to overfit and the val_loss stops decreasing. 
@@ -360,14 +360,14 @@ To not waste your time reading how i trial and error different epoch values, i w
 
 At 200 the RMSLE decreased showing the model was far from its optimum epoch number at 150 epochs, but at 250 there was an increase in RMSLE that is greater than that of 150 epochs, an obvious sign of overfitting.
 
-## Version 32, 32.2 and 32.3: Fiddling with datetime values pt 1
+### Version 32, 32.1 and 32.2: Fiddling with datetime values pt 1
 I've messed with hyperparameters enough, so in this version i want to focus more on the actual variables, one of which is the datetime column. As you know i created called get_dummies to create dummy columns for the month portion of the datetime values (Version 14), essentially creating 12 columns for each month. However, i recently learned that having all 12 introduces multicollinearity. For example, if you see that the value for every column representing the months January to November is 'False', you automatically know that December is 'True'. However i like the month of December, so if i had to get rid of a month it would be January. Also im going to comment out the fitting of the mock training data, which is the fraction of the whole training data that i split using train_test_split, to save time during submission. A single 200 epoch fitting already takes a long time, id rather not do it twice for every submission.
 
 Edit: public RMSLE score - 1.06561 
 
 Not too sure why it did worse, in theory it should have improved because everything was the same as version 31 which was the version that got the best public score so far. Edit: i think it may have something to do with the 'keras.utils.set_random_seed(0)' code, which by right is supposed to make all random operations that occur during the creation and training of the model (such as setting of weights etc) constant whenever the code is run for result reproducibility, but apparently this is an outdated way to set random seed, a fault on my part. Future version will use the more recent 'tf.random.set_seed(0)' to set constant random seed. To test this ill be submitting an exact replica of Version 31 and seeing if the results are still 1.06389. Edit: it was not, i got 1.06448. Apparently its quite common to have different results for the same code in Kaggle competitions, there are numerous complaints on reddit from people who have experienced the same thing. Oh well, close enough i guess.
 
-## Version 33: Fiddling with datetime values pt 2
+### Version 33: Fiddling with datetime values pt 2
 Now i will be trying out this other cool new data prepping method for datetime values called 'cyclic encoding', sounds very cool i know. What is unique about the month portion in the datetime values is that they are cyclic, meaning although December is the 12th month and January is the 1st, the 2 months are actually right next to each other even though their numbers are not (12 and 1). This new method is basically just applying both the sin and cos function to the month numbers which accounts for the cyclic nature of the data. This may not beat our all time best score of 1.06389 due to the random seed problem which stopped us from being able to reproduce results, but it should beat 1.06448, which is the score we got after changing the random seed line of code.
 
 Edit: public RMSLE score - 1.06547
