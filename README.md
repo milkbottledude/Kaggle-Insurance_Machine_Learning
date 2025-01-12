@@ -49,7 +49,7 @@ Chapter 1: Data Cleaning🧼 (Versions 1-15)
 - V10: [Vehicle Age](#version-10-vehicle-age)
 - V11: [Credit Score](#version-11-credit-score)
 - V12: [Insurance Duration](#version-12-insurance-duration)
-- V13: [Customer Feedback](#version-customer-feedback)
+- V13: [Customer Feedback](#version-13-customer-feedback)
 - V14: [Processing 'Policy Start Date' column](#version-14-processing-policy-start-date-column)
 - V15: [Making the Kaggle notebook run smoother](#version-15-making-the-kaggle-notebook-run-smoother)  
 
