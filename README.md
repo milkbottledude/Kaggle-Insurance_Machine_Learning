@@ -55,7 +55,7 @@ Chapter 1: Data Cleaning🧼 (Versions 1-15)
 
 Chapter 2: Machine Learning model(s) configuration⚙️
 - V16: [Training RandomForestRegressor model (a problem occured here)](#version-16-training-randomforestregressor-model)
-- V17: [Using Linear Regression](#using-linear-regression)
+- V17: [Using Linear Regression](#version-17-using-linear-regression)
 - V18: [Finally found the problem (and resolved it)](#version-18-finally-found-the-problem)
 - V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-decision-tree-regressor)
 - V20: [Trying RandomForestRegressor model again](#version-20-randomforestregressor)
