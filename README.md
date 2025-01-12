@@ -74,8 +74,8 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V33: [Experimenting with datetime values pt 2](#version-33-fiddling-with-datetime-values-pt-2)
 
 Chapter 3: [Conclusion](#chapter-3---conclusion)
-- [Final Results](#final results)
-- Parting words(#parting words)
+- [Final Results](#final-results)
+- [Parting words](#parting-words)
 
 ## 📚 Documentation
 
