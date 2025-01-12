@@ -62,7 +62,7 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V21: [TensorFlow Neural Network model](#version-21-switching-it-up-with-tensorflow-neural-network)
 - V22: [Configuring TF NN model hyperparams](#version-22-configuring-the-model-further)
 - V23: [Configuring data for NN model](#version-23-feeding-data-into-nn-model)
-- V24: [First NN model submission (big improvement!)](#version-24-training-the-model-first-submission)
+- V24: [First NN model submission (big improvement!)](#version-24-training-the-model-and-first-submission)
 - V25: [Adjusting hyperparameter - Neuron number](#version-25-adjusting-neuronunit-number)
 - V26: [Adjusting hyperparameter - Batch size](#version-26-adjusting-training-batch_size)
 - V27: [Adjusting batch size pt 2](#version-27-adjusting-training-batch_size-again)
@@ -228,7 +228,7 @@ metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to ha
 ### Version 23: Feeding data into NN model
 Before passing the datasets, i gotta convert them from pandas dataframes to numpy arrays. After that, we can train the model using the fit method. For the hyperparameters, starting with 10 for number of epochs. For batch_size, i decided to go with 100. I feel its a value thats not too big that the model overfits, but also not too small that it takes forever all the rows to be trained on. These values are just starter values and ill be adjusting them in the future if needed, depending on whether overfitting or underfitting occurs or if the time taken for training is too long.
 
-### Version 24: Training the model + first submission
+### Version 24: Training the model and First Submission
 As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs (Fig 10):
 
 Fig 10:
