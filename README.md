@@ -1,5 +1,5 @@
 
-![image](https://github.com/user-attachments/assets/06c59034-4847-4fbc-af77-9937a3ec1136)
+![image](https://github.com/user-attachments/assets/9c8817df-c9db-42df-b004-6a0a319e5d79)
 
 - 🗪 Feel free to telegram me [@milkbottledude](https://t.me/milkbottledude) if you have any questions, or just want to chat :)
 
