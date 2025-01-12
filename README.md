@@ -57,8 +57,8 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V16: [Training RandomForestRegressor model (a problem occured here)](#version-16-training-randomforestregressor-model)
 - V17: [Using Linear Regression](#version-17-using-linear-regression)
 - V18: [Finally found the problem (and resolved it)](#version-18-finally-found-the-problem)
-- V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-&-19.1-decision-tree-regressor)
-- V20: [Trying RandomForestRegressor model again](#version-20-20.1-20.1.1-randomforestregressor)
+- V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-and-19.1-decision-tree-regressor)
+- V20: [Trying RandomForestRegressor model again](#version-20-20.1-and-20.1.1-randomforestregressor)
 - V21: [TensorFlow Neural Network model](#version-21-switching-it-up-with-tensorflow-neural-network)
 - V22: [Configuring TF NN model hyperparams](#version-22-configuring-the-model-further)
 - V23: [Configuring data for NN model](#version-23-feeding-data-into-nn-model)
@@ -197,12 +197,12 @@ Fig 8:
 
 Edit: First submission RMSLE - 1.16532, Leaderboard placing - 578/643 (10th percentile)
 
-### Version 19 & 19.1: Decision Tree regressor
+### Version 19 and 19.1: Decision Tree regressor
 Trying out a DecisionTreeRegressor model. On the mock test data, it didnt do as well and got an RMSLE score of 1.52. But if theres one thing i learned from the previous competition (predicting depression), its that the mock test data score could sometimes be very different from the actual score, although granted this kind of occurence is rare. Only one way to find out.
 
 Edit: public RMSLE score - 1.51244 
 
-### Version 20 & 20.1 & 20.1.1: RandomForestRegressor
+### Version 20, 20.1 and 20.1.1: RandomForestRegressor
 I'm feeling patient today so im trying this model again, but its going to take a very long time.
 
 Edit: Took a long time (Fig 9), but it was worth it. Got our best public RMSLE score so far, 1.1535. An improvement compared to previous best (1.16532) with the basic linear regression model.
@@ -360,7 +360,7 @@ To not waste your time reading how i trial and error different epoch values, i w
 
 At 200 the RMSLE decreased showing the model was far from its optimum epoch number at 150 epochs, but at 250 there was an increase in RMSLE that is greater than that of 150 epochs, an obvious sign of overfitting.
 
-## Version 32, 32.2 & 32.3: Fiddling with datetime values pt 1
+## Version 32, 32.2 and 32.3: Fiddling with datetime values pt 1
 I've messed with hyperparameters enough, so in this version i want to focus more on the actual variables, one of which is the datetime column. As you know i created called get_dummies to create dummy columns for the month portion of the datetime values (Version 14), essentially creating 12 columns for each month. However, i recently learned that having all 12 introduces multicollinearity. For example, if you see that the value for every column representing the months January to November is 'False', you automatically know that December is 'True'. However i like the month of December, so if i had to get rid of a month it would be January. Also im going to comment out the fitting of the mock training data, which is the fraction of the whole training data that i split using train_test_split, to save time during submission. A single 200 epoch fitting already takes a long time, id rather not do it twice for every submission.
 
 Edit: public RMSLE score - 1.06561 
