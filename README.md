@@ -37,7 +37,7 @@ I added some photos of the project process in the documentation below for better
 
 ## Table of Content 📖
 Chapter 1: Data Cleaning🧼 (Versions 1-15)
-- V1: [A New Start](#version-1-a-new-start)(#
+- V1: [A New Start](#version-1-a-new-start)
 - V2: [Identifying NaN columns](#version-2-identifying-nan-columns)
 - V3: [Tackling NaNs, starting with the 'Age' column](#version-3-age)
 - V4: [Annual Income](#version-4-annual-income)
