@@ -74,7 +74,8 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V33: [Experimenting with datetime values pt 2](#version-33-fiddling-with-datetime-values-pt-2)
 
 Chapter 3: [Conclusion](#chapter-3---conclusion)
-
+- [Final Results](#final results)
+- Parting words(#parting words)
 
 ## 📚 Documentation
 
@@ -375,11 +376,12 @@ Edit: public RMSLE score - 1.06547
 Always remember to change your neural network model's input layer shape after feature engineering. Dont be like me who left the notebook running for 2 hours, just to come back and see an error message at the fitting stage. 
 
 ## Chapter 3 - Conclusion
-
+### Final results
 And thats the end of the competition, here is my final standing with the rest of the test data used by Kaggle to compute the final leaderboard at the end of the 30 day competition duration:
 
 Final public RMSLE score - 1.06612, Final leaderboard position - 1074/2392 (55th percentile)
 
+### Parting words
 Once again, this was fun. Big learning point from this project was definitely neural networks, and learning it was certainly an ordeal. Not just tuning and feature engineering, but just prepping the data to be put into the model and learning HOW to put the data into the model, creating layers etc was also difficult to pick up. But totally worth it when i saw the RMSLE score improve by so much and the leaderboard position shoot up. Neural networks definitely have a big advantage over traditional regression or tree classifier models in many ways, particularly handling non linearity in the data. So im very glad to have been given the opportunity to learn and practice this type of machine learning model on a dataset as large and interesting as this insurance one. Im looking forward to the next project where i can test out my new neural network skills as well as improve my tuning of the model. 
 
 If you have read this far, thank you so much. I hope this was as informative and enjoyable to you as it was for me. Have a good day, dont forget to drink water. 
