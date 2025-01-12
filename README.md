@@ -62,7 +62,7 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V21: [TensorFlow Neural Network model](#version-21-switching-it-up-with-tensorflow-neural-network)
 - V22: [Configuring TF NN model hyperparams](#version-22-configuring-the-model-further)
 - V23: [Configuring data for NN model](#version-23-feeding-data-into-nn-model)
-- V24: [First NN model submission (big improvement!)](#version-24-training-the-model-first-submission)
+- V24: [First NN model submission (big improvement!)](#version-24-training-the-model-+-first-submission)
 - V25: [Adjusting hyperparameter - Neuron number](#version-25-adjusting-neuronunit-number)
 - V26: [Adjusting hyperparameter - Batch size](#version-26-adjusting-training-batch_size)
 - V27: [Adjusting batch size pt 2](#version-27-adjusting-training-batch_size-again)
