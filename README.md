@@ -37,43 +37,43 @@ I added some photos of the project process in the documentation below for better
 
 ## Table of Content 📖
 Chapter 1: Data Cleaning🧼 (Versions 1-15)
-- V1: [A New Start](#version-1-a-new-start)
-- V2: Identifying NaN columns
-- V3: Tackling NaNs, starting with the 'Age' column
-- V4: Annual Income
-- V5: Marital Status
-- V6: Number of Dependents
-- V7: Occupation
-- V8: Health Score
-- V9: Previous Claims
-- V10: Vehicle Age
-- V11: Credit Score
-- V12: Insurance Duration
-- V13: Customer Feedback
-- V14: Processing 'Policy Start Date' column
-- V15: Making the Kaggle notebook run smoother
+- V1: [A New Start](#version-1-a-new-start)(#
+- V2: [Identifying NaN columns](#version-2-identifying-nan-columns)
+- V3: [Tackling NaNs, starting with the 'Age' column](#version-3-age)
+- V4: [Annual Income](#version-4-annual-income)
+- V5: [Marital Status](#version-5-marital-status)
+- V6: [Number of Dependents](#version-6-number-of-dependents)
+- V7: [Occupation](#version-7-occupation)
+- V8: [Health Score](#version-8-health-score)
+- V9: [Previous Claims](#version-9-previous-claims)
+- V10: [Vehicle Age](#version-10-vehicle-age)
+- V11: [Credit Score](#version-11-credit-score)
+- V12: [Insurance Duration](#version-12-insurance-duration)
+- V13: [Customer Feedback](#version-customer-feedback)
+- V14: [Processing 'Policy Start Date' column](#version-14-processing-policy-start-date-column)
+- V15: [Making the Kaggle notebook run smoother](#version-15-making-the-kaggle-notebook-run-smoother)  
 
 Chapter 2: Machine Learning model(s) configuration⚙️
-- V16: Training RandomForestRegressor model (a problem occured here)
-- V17: Resorting to Linear Regression
-- V18: Finally found the problem (and resolved it)
-- V19: Seeing how a normal Decision Tree Regressor fares
-- V20: Trying RandomForestRegressor model again
-- V21: TensorFlow Neural Network model
-- V22: Configuring TF NN model hyperparams
-- V23: Configuring data for NN model
-- V24: First NN model submission (big improvement!)
-- V25: Adjusting hyperparameter - Neuron number
-- V26: Adjusting hyperparameter - Batch size
-- V27: Adjusting batch size pt 2
-- V28: Adjusting hyperparameter - Layer number
-- V29: Scaling data
-- V30: Adjusting hyperparameter - Epoch number
-- V31: Adjusting number of epochs pt 2
-- V32: Experimenting with data - datetime values
-- V33: Experimenting with datetime values pt 2
+- V16: [Training RandomForestRegressor model (a problem occured here)](#version-16-training-randomforestregressor-model)
+- V17: [Using Linear Regression](#using-linear-regression)
+- V18: [Finally found the problem (and resolved it)](#version-18-finally-found-the-problem)
+- V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-decision-tree-regressor)
+- V20: [Trying RandomForestRegressor model again](#version-20-randomforestregressor)
+- V21: [TensorFlow Neural Network model](#version-21-switching-it-up-with-tensorflow-neural-network)
+- V22: [Configuring TF NN model hyperparams](#version-22-configuring-the-model-further)
+- V23: [Configuring data for NN model](#version-23-feeding-data-into-nn-model)
+- V24: [First NN model submission (big improvement!)](#version-24-training-the-model-+-first-submission)
+- V25: [Adjusting hyperparameter - Neuron number](#version-25-adjusting-neuronunit-number)
+- V26: [Adjusting hyperparameter - Batch size](#version-26-adjusting-training-batch_size)
+- V27: [Adjusting batch size pt 2](#version-27-adjusting-training-batch_size-again)
+- V28: [Adjusting hyperparameter - Layer number](#version-28-adjusting-number-of-layers)
+- V29: [Scaling data](#version-29-scaling-data)
+- V30: [Adjusting hyperparameter - Epoch number](#version-30-adjusting-number-of-epochs)
+- V31: [Adjusting number of epochs pt 2](#version-31-adjusting-number-of-epochs-again)
+- V32: [Experimenting with data - datetime values](#version-32-fiddling-with-datetime-values-pt-1)
+- V33: [Experimenting with datetime values pt 2](#version-33-fiddling-with-datetime-values-pt-2)
 
-Chapter 3: Conclusion
+Chapter 3: [Conclusion](#chapter-3---conclusion)
 
 
 ## 📚 Documentation
@@ -228,7 +228,7 @@ metrics: ['mae', 'rmse']. Taking advantage of the compile method's ability to ha
 ## Version 23: Feeding data into NN model
 Before passing the datasets, i gotta convert them from pandas dataframes to numpy arrays. After that, we can train the model using the fit method. For the hyperparameters, starting with 10 for number of epochs. For batch_size, i decided to go with 100. I feel its a value thats not too big that the model overfits, but also not too small that it takes forever all the rows to be trained on. These values are just starter values and ill be adjusting them in the future if needed, depending on whether overfitting or underfitting occurs or if the time taken for training is too long.
 
-## Version 24: Training the model
+## Version 24: Training the model + first submission
 As the train.csv given to us has so many rows (1.2m), i decided to further split up the training data using the validation_split parameter while fitting the model on top of already splitting it once in an earlier version using train_test_split. This is so that i can leave the mocktest data as a 'final test' after the model has run through all the epochs, before finally submitting the model to the competition. I also set number of epochs to 10. Here are training and validation losses (RMSLE) over the different epochs (Fig 10):
 
 Fig 10:
