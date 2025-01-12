@@ -57,7 +57,7 @@ Chapter 2: Machine Learning model(s) configuration⚙️
 - V16: [Training RandomForestRegressor model (a problem occured here)](#version-16-training-randomforestregressor-model)
 - V17: [Using Linear Regression](#version-17-using-linear-regression)
 - V18: [Finally found the problem (and resolved it)](#version-18-finally-found-the-problem)
-- V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-19.1-decision-tree-regressor)
+- V19: [Seeing how a normal Decision Tree Regressor fares](#version-19-&-19.1-decision-tree-regressor)
 - V20: [Trying RandomForestRegressor model again](#version-20-20.1-20.1.1-randomforestregressor)
 - V21: [TensorFlow Neural Network model](#version-21-switching-it-up-with-tensorflow-neural-network)
 - V22: [Configuring TF NN model hyperparams](#version-22-configuring-the-model-further)
