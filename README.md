@@ -4,7 +4,7 @@
 - 🗪 Feel free to telegram me [@milkbottledude](https://t.me/milkbottledude) if you have any questions, or just want to chat :)
 
 ## Overview 🔍
-Here is the link to the official [Kaggle insurance competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview), although you need to join the competition with a valid account to view the full datasets.
+Welcome! Here is the link to the official [Kaggle insurance competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview), although you need to join the competition with a valid account to view the full datasets.
 
 
 This project aims to predict insurance premiums based on various factors, such as but not limited to:
