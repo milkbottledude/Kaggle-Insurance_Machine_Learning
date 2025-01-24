@@ -379,7 +379,10 @@ Always remember to change your neural network model's input layer shape after fe
 ### Final results
 And thats the end of the competition, here is my final standing with the rest of the test data used by Kaggle to compute the final leaderboard at the end of the 30 day competition duration:
 
-Final public RMSLE score - 1.06612, Final leaderboard position - 1074/2392 (55th percentile)
+Final public RMSLE score - 1.06612, Final leaderboard position - 1081/2392 (55th percentile)
+
+![image](https://github.com/user-attachments/assets/3cdbc149-b71a-4b31-8d4a-2397f5f37def)
+
 
 ### Parting words
 Once again, this was fun. Big learning point from this project was definitely neural networks, and learning it was certainly an ordeal. 
